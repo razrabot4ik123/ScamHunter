@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: Inter, sans-serif; // менять
+  font-family: SFProDisplay, sans-serif;
   font-weight: 400;
   font-size: 16px;
   scroll-behavior: smooth !important;
@@ -15,8 +15,8 @@ html {
 .body {
   position: relative;
   overflow-x: hidden;
-  color: var(--neutral-color-100); // менять
-  background-color: var(--neutral-color-10); // менять
+  color: var(--neutral-color-10);
+  background-color: var(--bg-color-10);
 
   &--fixed {
     overflow-y: hidden;

@@ -1,1 +1,42 @@
-:root {}
+:root {
+  // text color
+  --text-color-10: #000;
+  --text-color-20: #616161;
+  --text-color-30: #090909;
+
+  // accent text color
+  --accent-color-10: #98ed3a;
+  --accent-color-20: #b0fa5d;
+  --accent-color-30: #87ff00;
+  --accent-color-40: #f3bc36;
+  --accent-color-50: #f3bc36;
+
+  // background color
+  --bg-color-10: #040408;
+
+  // container
+  --container-width: 1513px;
+  --container-padding: 15px;
+
+  @include mini-desktop {
+    --container-width: 1000px;
+  }
+
+  @include tablet {
+    --container-width: 800px;
+  }
+
+  @include mobile {
+    --container-width: 480px;
+  }
+
+  // transition
+  --transition: 0.2s ease-in-out;
+
+  // z-index
+  --z-index-minus-1: -1;
+  --z-index-1: 1;
+  --z-index-2: 2;
+  --z-index-3: 3;
+  --z-index-4: 4;
+}
