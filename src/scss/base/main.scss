@@ -70,7 +70,7 @@ label {
 .container {
   margin: 0 auto;
   padding: 0 var(--container-padding);
-  width: min(var(--container-width), calc(100% - var(--container-padding) * 2));
+  max-width: calc(var(--container-width) + (var(--container-padding) * 2));
 }
 
 .hidden {
