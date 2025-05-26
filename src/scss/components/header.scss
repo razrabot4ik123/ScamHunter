@@ -1,5 +1,82 @@
 .header {
+  padding: 24px 0;
+
   &__container {
     @include flex-justify-between-align-center;
+  }
+
+  &__right {
+    @include flex-align-center;
+    gap: 20px;
+  }
+
+  &__language {
+    &-list {
+      @include flex-align-center;
+      gap: 13px;
+    }
+
+    &-link {
+      font-family: Aeonik, sans-serif;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--text-color-40);
+      opacity: 0.41;
+      transition:
+        opacity var(--transition),
+        color var(--transition);
+
+      &:hover {
+        color: var(--accent-color-10);
+        opacity: 1;
+      }
+
+      &--active {
+        color: var(--accent-color-10);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__socials {
+    &-list {
+      @include flex-align-center;
+      gap: 5px;
+    }
+
+    &-link {
+      @include flex-all-center;
+      border: 1px solid var(--border-color-10);
+      border-radius: 6px;
+      width: 49px;
+      height: 49px;
+      background-color: var(--bg-color-20);
+    }
+  }
+
+  &__burger {
+    display: none;
+  }
+}
+
+.nav {
+  &__list {
+    @include flex-align-center;
+    gap: 52px;
+  }
+
+  &__link {
+    font-family: Aeonik, sans-serif;
+    line-height: 1;
+    color: var(--text-color-40);
+    transition: color var(--transition);
+
+    &:hover {
+      color: var(--accent-color-30);
+    }
+
+    &--active {
+      color: var(--accent-color-30);
+    }
   }
 }
