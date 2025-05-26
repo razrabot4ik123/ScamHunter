@@ -1,8 +1,8 @@
-@import './mixins';
-@import './base';
-@import './globals';
+@import 'mixins';
+@import 'base';
+@import 'globals';
 
 // components
-@import './components/header';
-@import './components/news/news';
-@import './components/footer';
+@import 'components/news/news';
+@import 'components/header';
+@import 'components/footer';
