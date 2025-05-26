@@ -6,6 +6,17 @@ html {
   scroll-behavior: smooth !important;
 }
 
+::selection {
+  color: var(--text-color-30);
+  background-color: var(--accent-color-10);
+}
+
+/* stylelint-disable-next-line selector-no-vendor-prefix */
+::-moz-selection {
+  color: var(--text-color-30);
+  background-color: var(--accent-color-10);
+}
+
 *,
 *::before,
 *::after {
