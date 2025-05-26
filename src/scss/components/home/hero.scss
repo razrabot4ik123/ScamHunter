@@ -1,0 +1,74 @@
+.hero {
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    &-decor {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    position: absolute;
+    z-index: var(--z-index-1);
+    max-width: 440px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+
+    @include tablet {
+      max-width: 330px;
+      font-size: 18px;
+    }
+
+    @include small-tablet {
+      max-width: 294px;
+      font-size: 16px;
+    }
+
+    @include mobile {
+      max-width: 257px;
+      font-size: 14px;
+    }
+
+    &--left {
+      top: 30px;
+      left: 15px;
+
+      @include mini-desktop {
+        top: 0;
+      }
+
+      @include mobile {
+        position: relative;
+        top: 20px;
+      }
+    }
+
+    &--right {
+      right: 15px;
+      bottom: 120px;
+      text-align: right;
+
+      @include mini-desktop {
+        bottom: 70px;
+      }
+
+      @include small-tablet {
+        bottom: 40px;
+      }
+
+      @include mobile {
+        bottom: 10px;
+      }
+    }
+
+    & span {
+      color: var(--text-color-20);
+    }
+  }
+}

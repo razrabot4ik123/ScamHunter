@@ -27,7 +27,9 @@
 
     @include tablet {
       position: fixed;
-      inset: 0;
+      top: -100vh;
+      right: 0;
+      left: 0;
       flex-direction: column;
       justify-content: center;
       width: 100vw;
