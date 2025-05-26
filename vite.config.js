@@ -15,6 +15,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './src/index.html',
+        news: './src/news.html',
+        hunt: './src/hunt.html',
       },
     },
   },
