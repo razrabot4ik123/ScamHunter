@@ -2,6 +2,14 @@
   overflow: hidden;
   padding-bottom: 136px;
 
+  @include tablet {
+    padding-bottom: 66px;
+  }
+
+  @include mobile {
+    padding-bottom: 41px;
+  }
+
   &__container {
     position: relative;
   }
