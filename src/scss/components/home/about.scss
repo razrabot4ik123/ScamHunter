@@ -1,7 +1,99 @@
 .about {
+  overflow: hidden;
+  padding-bottom: 136px;
+
+  &__container {
+    position: relative;
+  }
+
   &__title {
+    margin-bottom: 10px;
+    font-weight: 400;
     font-size: 20px;
     line-height: 1.05;
+    text-align: center;
     color: var(--text-color-50);
+  }
+
+  &__subtitle {
+    margin-bottom: 71px;
+    font-family: Furore, sans-serif;
+    font-size: 74px;
+    line-height: 1.05;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(180deg, #fff 69.19%, #fff0 70.97%, #fff 89.9%);
+    background-clip: text;
+  }
+
+  &__info {
+    display: grid;
+    gap: 15px 12px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__card {
+    border: 1px solid var(--border-color-30);
+    border-radius: 12px;
+    padding: 43px 45px 60px 35px;
+    background: var(--bg-color-40);
+    backdrop-filter: blur(17.85px);
+
+    &:nth-child(2) {
+      background: #000000c2;
+    }
+
+    &-title {
+      margin-bottom: 30px;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      color: var(--accent-color-10);
+    }
+
+    &-description {
+      line-height: 1.61;
+    }
+
+    &-list {
+      @include flex-column;
+      gap: 12px;
+    }
+
+    &-item {
+      display: flex;
+      gap: 19px;
+      align-items: baseline;
+      line-height: 1.75;
+    }
+
+    &-icon {
+      @include flex-all-center;
+      position: relative;
+      flex-shrink: 0;
+      border-radius: 50%;
+      width: 14px;
+      height: 14px;
+      box-shadow: 0 3px 4px 0 #00000085;
+      background: linear-gradient(170deg, #f3f3f3 0%, #b4b4b4 100%);
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: var(--z-index-minus-1);
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        background-color: #3c3c3c;
+      }
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: 50px;
+    right: -300px;
+    z-index: var(--z-index-minus-1);
   }
 }
