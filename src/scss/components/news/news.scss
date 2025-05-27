@@ -1,12 +1,30 @@
 .news {
   padding: 7px 0 82px;
+
+  @include small-mobile {
+    padding-bottom: 50px;
+  }
+
   &__title {
     margin-bottom: 13px;
     font-family: Furore, sans-serif;
     font-weight: 400;
     font-size: 74px;
     line-height: 105%;
-    color: #fff;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(180deg, #fff 69.19%, #fff0 70.97%, #fff 89.9%);
+    background-clip: border-box;
+    background-clip: text;
+
+    @include mini-desktop {
+      text-align: center;
+    }
+
+    @include small-mobile {
+      margin-bottom: 10px;
+      font-size: 45px;
+      text-align: left;
+    }
   }
 
   &__descr {
@@ -16,112 +34,157 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 144%;
-    color: #fff;
+    color: var(--text-color-40);
+
+    @include mini-desktop {
+      margin: 0 auto 52px;
+    }
+
+    @include small-mobile {
+      margin-bottom: 48px;
+      font-size: 14px;
+      color: #ffffff78;
+    }
   }
 
   &__cards-list {
-    margin-bottom: 70px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 70px;
     row-gap: 40px;
+
+    @include small-desktop {
+      gap: 40px;
+      justify-content: flex-start;
+      margin: 0 auto 70px;
+      max-width: 1156px;
+    }
+
+    @include mini-desktop {
+      max-width: 756px;
+    }
+
+    @include small-tablet {
+      max-width: 358px;
+    }
+
+    @include small-mobile {
+      gap: 25px;
+      margin-bottom: 48px;
+    }
   }
 
   &__card {
     position: relative;
-    max-width: 358px;
     border-radius: 13px;
     padding-bottom: 23px;
+    max-width: 358px;
     background: #3a3737;
-    &::before{
-      background: linear-gradient(180deg, rgba(10, 12, 14, 0) 0%, rgba(14, 16, 18, 0.85) 30.77%, #121417 61.42%, #15171b 100%);
+
+    // ВРЕМЕННО, НА ВП ЭТО ДЕЛАЕТСЯ ФУНКЦИЕЙ
+    &:nth-child(n + 4) {
+      @include small-tablet {
+        display: none;
+      }
+    }
+
+    &::before {
       content: '';
       position: absolute;
-      bottom: 0;
       right: 0;
+      bottom: 0;
       left: 0;
+      border-radius: 13px;
       height: 355px;
-      border-radius: 13px ;
+      background: linear-gradient(
+        180deg,
+        #0a0c0e00 0%,
+        #0e1012d9 30.77%,
+        #121417 61.42%,
+        #15171b 100%
+      );
     }
+
     &-img {
       margin-bottom: -100px;
       border-radius: 13px 13px 0 0;
     }
+
     &-title {
       position: relative;
       margin-bottom: 40px;
+      border-left: 1px solid var(--border-color-50);
       padding-left: 25px;
       max-width: 320px;
-      border-left: 1px solid #98ed3a;
       font-weight: 500;
       font-size: 20px;
       line-height: 122%;
       color: #dadada;
+
+      @include small-mobile {
+        margin-bottom: 38px;
+      }
     }
+
     &-meta {
       position: relative;
       display: flex;
-      align-items: center;
       gap: 25px;
+      align-items: center;
       margin-bottom: 26px;
       padding-left: 25px;
       font-weight: 500;
       font-size: 16px;
       color: #666;
+
       & span,
-      & a{
+      & a {
         display: flex;
-        align-items: center;
         gap: 11px;
+        align-items: center;
       }
     }
+
     &-meta a {
       color: #666;
     }
   }
 
-  &__meta-date {
-  }
-
-  &__meta-views {
-  }
-
-  &__meta-comments {
-  }
-
   &__reactions-list {
     position: relative;
-    padding-left: 25px;
     display: flex;
-    flex-wrap: wrap;
     gap: 8px 6px;
+    flex-wrap: wrap;
+    padding-left: 25px;
   }
 
   &__reaction-item {
     display: flex;
+    gap: 6px;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    margin-bottom: 2px;
     border-radius: 25px;
     padding: 5px 13px 5px 10px;
     font-weight: 500;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.43);
-    background: rgba(171, 171, 171, 0.2);
-    margin-bottom: 2px;
+    color: #ffffff6e;
+    background: #ababab33;
   }
 
   &__pagination {
     display: flex;
+    gap: 5px;
     align-items: center;
     justify-content: center;
-    gap: 5px;
     font-weight: 400;
     font-size: 15px;
     line-height: 133%;
     text-align: center;
-    color: #fff;
+    color: var(--text-color-40);
+
     &-btn {
       display: inline-flex;
       align-items: center;
@@ -129,27 +192,17 @@
       border-radius: 4px;
       width: 32px;
       height: 32px;
+      color: var(--text-color-40);
       background: #232833;
-      color: #fff;
-      &--active {
-        background: #98ed3a;
-        color: #232833;
-      }
-      &--prev {
-      }
 
-      &--next {
+      &--active {
+        color: #232833;
+        background: #98ed3a;
       }
 
       &--inaccessible {
         background: #2f323e;
         opacity: 0.5;
-      }
-
-      &--count {
-      }
-
-      &--space {
       }
     }
   }
