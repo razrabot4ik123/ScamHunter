@@ -40,7 +40,7 @@
     backdrop-filter: blur(17.85px);
 
     &:nth-child(2) {
-      background: #000000c2;
+      background: var(--bg-color-60);
     }
 
     &-title {
@@ -85,7 +85,7 @@
         border-radius: 50%;
         width: 22px;
         height: 22px;
-        background-color: #3c3c3c;
+        background-color: var(--bg-color-50);
       }
     }
   }

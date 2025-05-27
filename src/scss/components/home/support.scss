@@ -34,12 +34,13 @@
     border: 1px solid var(--border-color-40);
     border-radius: 12px;
     padding: 39px 31px 32px;
-    background: #0000;
+    background: var(--bg-color-70);
     backdrop-filter: blur(35.7px);
 
     &-icon {
-      @include flex-all-center;
+      display: block;
       margin-bottom: 55px;
+      border-radius: 12px;
       width: 95px;
       height: 95px;
     }
@@ -51,7 +52,7 @@
       font-family: Aeonik, sans-serif;
       font-weight: 500;
       line-height: 1.55;
-      color: #ffffffc2;
+      color: var(--text-color-60);
       opacity: 0.54;
     }
 
@@ -66,19 +67,19 @@
       margin-bottom: 31px;
       font-size: 16px;
       line-height: 1.55;
-      color: #ffffffa8;
+      color: var(--bg-color-80);
     }
 
     &-button {
       @include flex-all-center;
       gap: 9px;
-      border: 1px solid #97ec3985;
+      border: 1px solid var(--border-color-50);
       border-radius: 7px;
       padding: 15px 20px 14px;
       font-size: 15px;
       line-height: 1.3;
       color: var(--text-color-40);
-      background: #1212121c;
+      background: var(--bg-color-90);
       backdrop-filter: blur(16.1px);
     }
   }
