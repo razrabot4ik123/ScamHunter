@@ -29,7 +29,7 @@
 }
 
 @mixin small-mobile {
-  @media (max-width: 380px) {
+  @media (max-width: 420px) {
     @content;
   }
 }

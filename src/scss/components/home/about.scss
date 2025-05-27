@@ -13,6 +13,11 @@
     line-height: 1.05;
     text-align: center;
     color: var(--text-color-50);
+
+    @include mobile {
+      font-size: 16px;
+      text-align: start;
+    }
   }
 
   &__subtitle {
@@ -24,12 +29,36 @@
     -webkit-text-fill-color: transparent;
     background: linear-gradient(180deg, #fff 69.19%, #fff0 70.97%, #fff 89.9%);
     background-clip: text;
+
+    @include mini-desktop {
+      font-size: 64px;
+    }
+
+    @include tablet {
+      margin-bottom: 51px;
+      font-size: 45px;
+    }
+
+    @include mobile {
+      margin-bottom: 31px;
+      text-align: start;
+      background: linear-gradient(180deg, #fff 82.45%, #fff0 83.49%, #fff 94.68%);
+      background-clip: text;
+    }
   }
 
   &__info {
     display: grid;
     gap: 15px 12px;
     grid-template-columns: repeat(3, 1fr);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__card {
@@ -39,8 +68,26 @@
     background: var(--bg-color-40);
     backdrop-filter: blur(17.85px);
 
+    @include mini-desktop {
+      padding: 30px 25px 60px;
+    }
+
+    @include mobile {
+      padding: 30px 20px 60px;
+    }
+
     &:nth-child(2) {
       background: var(--bg-color-60);
+    }
+
+    &:nth-child(3) {
+      @include tablet {
+        grid-column: span 2;
+      }
+
+      @include small-tablet {
+        grid-column: 1;
+      }
     }
 
     &-title {
@@ -50,10 +97,20 @@
       line-height: 1.1;
       letter-spacing: -0.04em;
       color: var(--accent-color-10);
+
+      @include mobile {
+        margin-bottom: 20px;
+        font-size: 23px;
+      }
     }
 
     &-description {
       line-height: 1.61;
+
+      @include mobile {
+        font-size: 15px;
+        line-height: 1.51;
+      }
     }
 
     &-list {
@@ -95,5 +152,24 @@
     top: 50px;
     right: -300px;
     z-index: var(--z-index-minus-1);
+
+    @include tablet {
+      top: 200px;
+      right: -100px;
+    }
+
+    @include small-tablet {
+      inset: 100px 0 0;
+      height: 100%;
+    }
+
+    @include mobile {
+      inset: 200px 0 auto;
+      transform: scale(1.13);
+    }
+
+    @include small-mobile {
+      transform: scale(1);
+    }
   }
 }
