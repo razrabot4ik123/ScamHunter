@@ -1,14 +1,29 @@
 .footer {
   padding-bottom: 24px;
 
+  @include mobile {
+    padding-bottom: 49px;
+  }
+
   &__container {
     border-top: 1px solid var(--border-color-60);
     padding-top: 43px;
+
+    @include mobile {
+      padding-top: 20px;
+    }
   }
 
   &__top {
     @include flex-justify-between-align-center;
+    gap: 59px 30px;
     margin-bottom: 60px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 0;
+    }
   }
 
   &__info {
@@ -19,6 +34,20 @@
       line-height: 1.05;
       letter-spacing: -0.02em;
 
+      @include small-tablet {
+        max-width: 270px;
+        font-size: 20px;
+      }
+
+      @include mobile {
+        max-width: 367px;
+      }
+
+      @include small-mobile {
+        max-width: 275px;
+        font-size: 15px;
+      }
+
       & span {
         color: var(--text-color-20);
       }
@@ -28,9 +57,17 @@
   &__logo {
     display: inline-block;
     margin-bottom: 17px;
+
+    @include mobile {
+      margin-bottom: 4px;
+    }
   }
 
   &__nav {
+    @include tablet {
+      display: none;
+    }
+
     &-title {
       margin-bottom: 23px;
       font-weight: 400;
@@ -67,6 +104,21 @@
       max-width: 313px;
       font-size: 25px;
       line-height: 1.03;
+
+      @include small-tablet {
+        max-width: 244px;
+        font-size: 20px;
+      }
+
+      @include mobile {
+        margin-bottom: 17px;
+        max-width: 304px
+      }
+
+      @include small-mobile {
+        max-width: 228px;
+        font-size: 15px;
+      }
     }
 
     &-list {
@@ -101,6 +153,10 @@
   }
 
   &__bottom {
+    @include tablet {
+      display: none;
+    }
+
     &-list {
       @include flex-justify-between-align-center;
     }
