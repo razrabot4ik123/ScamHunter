@@ -7,7 +7,51 @@
 
   &__title {
     &-decor {
-      width: 100%;
+      position: absolute;
+      top: 50px;
+      right: 20px;
+
+      @include small-desktop {
+        width: 800px;
+        height: 600px;
+      }
+
+      @include mini-desktop {
+        width: 600px;
+        height: 400px;
+      }
+
+      @include tablet {
+        top: -20px;
+        right: -70px;
+        width: 600px;
+        height: 300px;
+      }
+
+      @include small-tablet {
+        top: -18px;
+        right: -20px;
+        width: 470px;
+        height: 270px;
+      }
+
+      @include mobile {
+        top: 15px;
+        right: -40px;
+        width: 300px;
+        height: 180px;
+      }
+
+      @include small-mobile {
+        top: 27px;
+        right: -20px;
+        width: 250px;
+        height: 140px;
+      }
+
+      &-text {
+        width: 100%;
+      }
     }
   }
 
