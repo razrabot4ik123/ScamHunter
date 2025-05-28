@@ -51,6 +51,10 @@
       color: var(--accent-color-10);
       background-color: var(--text-color-30);
     }
+
+    &--mobile {
+      display: none;
+    }
   }
 
   &__list {
