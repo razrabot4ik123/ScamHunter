@@ -10,7 +10,7 @@
   }
 
   &__logo {
-    z-index: var(--z-index-1);
+    z-index: var(--z-index-5);
   }
 
   &__info {
@@ -30,12 +30,25 @@
       top: -100vh;
       right: 0;
       left: 0;
+      z-index: var(--z-index-4);
       flex-direction: column;
       justify-content: center;
       width: 100vw;
       height: 100vh;
       background-color: var(--bg-color-10);
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        top var(--transition),
+        opacity var(--transition),
+        visibility var(--transition);
       padding-inline: 15px;
+    }
+
+    &--visible {
+      top: 0;
+      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -45,6 +58,28 @@
 
     @include tablet {
       flex-direction: column;
+    }
+
+    @include mobile {
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    &-description {
+      display: none;
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      opacity: 0.46;
+
+      @include tablet {
+        display: block;
+      }
+
+      @include mobile {
+        max-width: 231px;
+        font-size: 15px;
+      }
     }
   }
 
@@ -117,7 +152,7 @@
   }
 
   &__burger {
-    z-index: var(--z-index-1);
+    z-index: var(--z-index-5);
     display: none;
     align-items: center;
     justify-content: center;
@@ -167,6 +202,8 @@
       gap: 23px;
       flex-direction: column;
       align-items: stretch;
+      margin: 0 auto;
+      max-width: 750px;
     }
   }
 
@@ -191,7 +228,7 @@
       color: var(--accent-color-30);
     }
 
-    & svg {
+    & img {
       display: none;
 
       @include tablet {

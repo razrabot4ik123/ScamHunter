@@ -198,7 +198,7 @@
       @include flex-all-center;
       position: relative;
       z-index: var(--z-index-2);
-      gap: 9px;
+      overflow: hidden;
       border: 1px solid var(--border-color-50);
       border-radius: 7px;
       padding: 15px 16px 14px;
@@ -206,14 +206,35 @@
       line-height: 1.3;
       color: var(--text-color-40);
       background-color: var(--bg-color-90);
-      transition:
-        background-color var(--transition),
-        color var(--transition);
       backdrop-filter: blur(16.1px);
 
+      & span {
+        @include flex-all-center;
+        position: relative;
+        z-index: var(--z-index-2);
+        gap: 9px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        width: 233px;
+        height: 28px;
+        background-color: var(--accent-color-10);
+        opacity: 0;
+        visibility: hidden;
+        filter: blur(25.899px);
+        transition:
+          opacity var(--transition),
+          visibility var(--transition);
+      }
+
       &:hover {
-        color: var(--accent-color-10);
-        background-color: var(--bg-color-60);
+        &::before {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
   }
