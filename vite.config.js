@@ -3,7 +3,7 @@ import injectHTML from 'vite-plugin-html-inject';
 
 export default defineConfig({
   root: './src',
-  base: '/scamhunter/',
+  base: '/ScamHunter/',
   server: {
     port: 3000,
     open: true,
