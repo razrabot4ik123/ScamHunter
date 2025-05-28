@@ -1,94 +1,27 @@
 .news {
-  padding: 7px 0 82px;
-
-  @include small-mobile {
-    padding-bottom: 50px;
-  }
-
   &__title {
     margin-bottom: 13px;
-    font-family: Furore, sans-serif;
-    font-weight: 400;
-    font-size: 74px;
-    line-height: 105%;
-    -webkit-text-fill-color: transparent;
-    background: linear-gradient(180deg, #fff 69.19%, #fff0 70.97%, #fff 89.9%);
-    background-clip: border-box;
-    background-clip: text;
-
-    @include mini-desktop {
-      text-align: center;
-    }
-
-    @include small-mobile {
-      margin-bottom: 10px;
-      font-size: 45px;
-      text-align: left;
-    }
   }
 
-  &__descr {
+  &__description {
     margin-bottom: 52px;
     max-width: 385px;
-    font-family: SFProDisplay, sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 144%;
+    line-height: 1.44;
     color: var(--text-color-40);
-
-    @include mini-desktop {
-      margin: 0 auto 52px;
-    }
-
-    @include small-mobile {
-      margin-bottom: 48px;
-      font-size: 14px;
-      color: #ffffff78;
-    }
+    opacity: 0.82;
   }
 
-  &__cards-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 70px;
-    row-gap: 40px;
-
-    @include small-desktop {
-      gap: 40px;
-      justify-content: flex-start;
-      margin: 0 auto 70px;
-      max-width: 1156px;
-    }
-
-    @include mini-desktop {
-      max-width: 756px;
-    }
-
-    @include small-tablet {
-      max-width: 358px;
-    }
-
-    @include small-mobile {
-      gap: 25px;
-      margin-bottom: 48px;
-    }
+  &__list {
+    display: grid;
+    gap: 40px 25px;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   &__card {
     position: relative;
+    overflow: hidden;
     border-radius: 13px;
-    padding-bottom: 23px;
-    max-width: 358px;
-    background: #3a3737;
-
-    // ВРЕМЕННО, НА ВП ЭТО ДЕЛАЕТСЯ ФУНКЦИЕЙ
-    &:nth-child(n + 4) {
-      @include small-tablet {
-        display: none;
-      }
-    }
+    background-color: var(--bg-color-110);
 
     &::before {
       content: '';
@@ -96,114 +29,48 @@
       right: 0;
       bottom: 0;
       left: 0;
-      border-radius: 13px;
-      height: 355px;
+      z-index: var(--z-index-1);
+      height: 350px;
       background: linear-gradient(
-        180deg,
-        #0a0c0e00 0%,
-        #0e1012d9 30.77%,
-        #121417 61.42%,
-        #15171b 100%
+        178deg,
+        #0a0c0e00 1.61%,
+        #0e1012d9 31.39%,
+        #121417 61.05%,
+        #15171b 98.39%
       );
     }
 
     &-img {
-      margin-bottom: -100px;
-      border-radius: 13px 13px 0 0;
+      position: relative;
+      padding-bottom: 120%;
+
+      & img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &-title {
-      position: relative;
-      margin-bottom: 40px;
-      border-left: 1px solid var(--border-color-50);
+      position: absolute;
+      top: 350px;
+      left: 0;
+      z-index: var(--z-index-2);
+      border-left: 1px solid var(--accent-color-10);
       padding-left: 25px;
-      max-width: 320px;
       font-weight: 500;
       font-size: 20px;
-      line-height: 122%;
-      color: #dadada;
-
-      @include small-mobile {
-        margin-bottom: 38px;
-      }
+      line-height: 1.22;
+      color: var(--text-color-70);
     }
 
-    &-meta {
+    &-info {
       position: relative;
-      display: flex;
-      gap: 25px;
-      align-items: center;
-      margin-bottom: 26px;
-      padding-left: 25px;
-      font-weight: 500;
-      font-size: 16px;
-      color: #666;
-
-      & span,
-      & a {
-        display: flex;
-        gap: 11px;
-        align-items: center;
-      }
-    }
-
-    &-meta a {
-      color: #666;
-    }
-  }
-
-  &__reactions-list {
-    position: relative;
-    display: flex;
-    gap: 8px 6px;
-    flex-wrap: wrap;
-    padding-left: 25px;
-  }
-
-  &__reaction-item {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2px;
-    border-radius: 25px;
-    padding: 5px 13px 5px 10px;
-    font-weight: 500;
-    font-size: 14px;
-    color: #ffffff6e;
-    background: #ababab33;
-  }
-
-  &__pagination {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    justify-content: center;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 133%;
-    text-align: center;
-    color: var(--text-color-40);
-
-    &-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      width: 32px;
-      height: 32px;
-      color: var(--text-color-40);
-      background: #232833;
-
-      &--active {
-        color: #232833;
-        background: #98ed3a;
-      }
-
-      &--inaccessible {
-        background: #2f323e;
-        opacity: 0.5;
-      }
+      z-index: var(--z-index-2);
+      padding: 10px 25px 33px 23px;
     }
   }
 }

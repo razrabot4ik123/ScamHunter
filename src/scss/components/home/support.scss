@@ -17,28 +17,14 @@
 
   &__subtitle {
     margin-bottom: 58px;
-    font-family: Furore, sans-serif;
-    font-size: 74px;
-    line-height: 1.05;
     text-align: center;
-    -webkit-text-fill-color: transparent;
-    background: linear-gradient(180deg, #fff 69.19%, #fff0 70.97%, #fff 89.9%);
-    background-clip: text;
-
-    @include mini-desktop {
-      font-size: 64px;
-    }
 
     @include tablet {
       margin-bottom: 49px;
-      font-size: 45px;
     }
 
     @include mobile {
-      margin-bottom: 39px;
       text-align: start;
-      background: linear-gradient(180deg, #fff 82.45%, #fff0 83.49%, #fff 94.68%);
-      background-clip: text;
     }
   }
 
@@ -220,7 +206,9 @@
       line-height: 1.3;
       color: var(--text-color-40);
       background-color: var(--bg-color-90);
-      transition: background-color var(--transition), color var(--transition);
+      transition:
+        background-color var(--transition),
+        color var(--transition);
       backdrop-filter: blur(16.1px);
 
       &:hover {
