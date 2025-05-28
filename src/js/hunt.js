@@ -1,3 +1,3 @@
-import '/scss/hunt.scss';
+import './scss/hunt.scss';
 
 // components
