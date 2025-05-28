@@ -1,0 +1,121 @@
+.footer {
+  padding-bottom: 24px;
+
+  &__container {
+    border-top: 1px solid var(--border-color-60);
+    padding-top: 43px;
+  }
+
+  &__top {
+    @include flex-justify-between-align-center;
+    margin-bottom: 60px;
+  }
+
+  &__info {
+    &-description {
+      max-width: 324px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+
+      & span {
+        color: var(--text-color-20);
+      }
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 17px;
+  }
+
+  &__nav {
+    &-title {
+      margin-bottom: 23px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.36;
+      letter-spacing: 0.03em;
+      color: var(--text-color-90);
+    }
+
+    &-item {
+      font-family: Aeonik, sans-serif;
+      line-height: 1;
+
+      &:not(:last-child) {
+        margin-bottom: 31px;
+      }
+    }
+
+    &-link {
+      color: var(--text-color-40);
+      transition: color var(--transition);
+
+      &:hover {
+        color: var(--accent-color-30);
+      }
+    }
+  }
+
+  &__socials {
+    font-style: normal;
+
+    &-description {
+      margin-bottom: 27px;
+      max-width: 313px;
+      font-size: 25px;
+      line-height: 1.03;
+    }
+
+    &-list {
+      @include flex-align-center;
+      gap: 6px;
+    }
+
+    &-link {
+      @include flex-all-center;
+      border: 1px solid var(--border-color-10);
+      border-radius: 7px;
+      width: 58px;
+      height: 58px;
+      background-color: var(--bg-color-20);
+      transition:
+        background-color var(--transition),
+        border-color var(--transition);
+
+      & path {
+        transition: fill var(--transition);
+      }
+
+      &:hover {
+        border-color: var(--accent-color-30);
+        background-color: var(--accent-color-10);
+
+        & path {
+          fill: var(--text-color-10);
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    &-list {
+      @include flex-justify-between-align-center;
+    }
+
+    &-link {
+      line-height: 1.17;
+      text-align: center;
+      text-decoration: underline;
+      color: var(--text-color-80);
+      opacity: 0.57;
+      text-decoration-skip-ink: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
