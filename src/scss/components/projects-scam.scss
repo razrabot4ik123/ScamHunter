@@ -1,0 +1,103 @@
+.projects-scam {
+  &__wrapper {
+    border: 2px solid var(--border-color-70);
+    border-radius: 30px;
+    padding: 34px 47px 35px;
+    box-shadow: 0 4px 4.5px 0 #00000040 inset;
+    background-color: var(--bg-color-120);
+    backdrop-filter: blur(23px);
+  }
+
+  &__top {
+    @include flex-justify-between-align-center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--accent-color-10);
+    padding-bottom: 34px;
+  }
+
+  &__info {
+    @include flex-align-center;
+    gap: 174px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--accent-color-10);
+  }
+
+  &__count {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  &__actions {
+    @include flex-align-center;
+    gap: 4px;
+  }
+
+  &__button {
+    border-radius: 14px;
+    padding: 17px 30px;
+    transition:
+      color var(--transition),
+      background-color var(--transition);
+
+    &:hover {
+      color: var(--accent-color-10);
+      background-color: var(--text-color-30);
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 21px;
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom: 35px;
+  }
+
+  &__card {
+    border-radius: 13px;
+    padding: 31px 47px 32px;
+    text-align: center;
+    background-color: var(--bg-color-20);
+
+    &-icon {
+      margin-bottom: 21px;
+    }
+
+    &-title {
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    &-date {
+      margin-bottom: 20px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      opacity: 0.34;
+    }
+
+    &-link {
+      font-size: 15px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-decoration-line: underline;
+      text-underline-position: from-font;
+      color: var(--accent-color-20);
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
