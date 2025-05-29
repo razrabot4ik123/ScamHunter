@@ -14,8 +14,16 @@
 // custom
 .projects-scam {
   margin-bottom: 40px;
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
 }
 
 .projects-shield {
   margin-bottom: 106px;
+
+  @include mobile {
+    margin-bottom: 55px;
+  }
 }

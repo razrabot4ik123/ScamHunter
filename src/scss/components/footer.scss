@@ -157,6 +157,10 @@
       display: none;
     }
 
+    &-decor {
+      pointer-events: none;
+    }
+
     &-list {
       @include flex-justify-between-align-center;
     }

@@ -1,6 +1,10 @@
 .support {
   padding-bottom: 100px;
 
+  @include mobile {
+    margin-bottom: 62px;
+  }
+
   &__title {
     margin-bottom: 10px;
     font-weight: 400;
