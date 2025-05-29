@@ -1,4 +1,11 @@
 .projects-scam {
+  &__container {
+    @include mobile {
+      padding: 0;
+      max-width: 100%;
+    }
+  }
+
   &__wrapper {
     border: 2px solid var(--border-color-70);
     border-radius: 30px;
@@ -6,18 +13,37 @@
     box-shadow: 0 4px 4.5px 0 #00000040 inset;
     background-color: var(--bg-color-120);
     backdrop-filter: blur(23px);
+
+    @include mobile {
+      border-radius: 9px;
+      padding: 25px 15px 33px;
+    }
   }
 
   &__top {
     @include flex-justify-between-align-center;
+    gap: 22px;
     margin-bottom: 30px;
     border-bottom: 3px solid var(--accent-color-10);
     padding-bottom: 34px;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 
   &__info {
     @include flex-align-center;
     gap: 174px;
+
+    @include mini-desktop {
+      gap: 60px;
+    }
+
+    @include small-tablet {
+      justify-content: space-between;
+    }
   }
 
   &__title {
@@ -26,18 +52,64 @@
     line-height: 1.05;
     letter-spacing: -0.02em;
     color: var(--accent-color-10);
+
+    @include mobile {
+      font-size: 22px;
+    }
   }
 
   &__count {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.05;
     letter-spacing: -0.02em;
+
+    @include mobile {
+      font-size: 18px;
+    }
   }
 
   &__actions {
     @include flex-align-center;
     gap: 4px;
+  }
+
+  &__search {
+    @include small-tablet {
+      width: 100%;
+    }
+
+    &-label {
+      position: relative;
+    }
+
+    &-input {
+      border-radius: 14px;
+      padding: 17px 16px 17px 39px;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--text-color-120);
+      background-color: var(--bg-color-150);
+      transition: color var(--transition);
+
+      @include small-tablet {
+        width: 100%;
+      }
+
+      &:focus {
+        color: var(--text-color-40);
+      }
+    }
+
+    &-button {
+      position: absolute;
+      top: 53%;
+      left: 16px;
+      padding: 0;
+      transform: translateY(-50%);
+    }
   }
 
   &__button {
@@ -47,6 +119,10 @@
       color var(--transition),
       background-color var(--transition);
 
+    @include tablet {
+      display: none;
+    }
+
     &:hover {
       color: var(--accent-color-10);
       background-color: var(--text-color-30);
@@ -54,6 +130,11 @@
 
     &--mobile {
       display: none;
+      margin-bottom: 23px;
+
+      @include tablet {
+        display: block;
+      }
     }
   }
 
@@ -62,13 +143,80 @@
     gap: 21px;
     grid-template-columns: repeat(6, 1fr);
     margin-bottom: 35px;
+
+    @include small-desktop {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    @include mini-desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      gap: 13px 10px;
+      margin-bottom: 17px;
+    }
   }
 
   &__card {
+    border-top: 3px solid var(--bg-color-20);
     border-radius: 13px;
-    padding: 31px 47px 32px;
+    padding: 28px 20px 32px;
     text-align: center;
     background-color: var(--bg-color-20);
+    transform-origin: top center;
+    transition:
+      transform var(--transition),
+      border-top var(--transition),
+      border-radius var(--transition),
+      box-shadow var(--transition);
+
+    // ВРЕМЕННО
+    @include small-desktop {
+      &:nth-child(n + 11) {
+        display: none;
+      }
+    }
+
+    @include mini-desktop {
+      &:nth-child(n + 9) {
+        display: none;
+      }
+    }
+
+    @include tablet {
+      &:nth-child(n + 7) {
+        display: none;
+      }
+    }
+
+    @include small-tablet {
+      &:nth-child(n + 5) {
+        display: none;
+      }
+    }
+
+    // ВРЕМЕННО-КОНЕЦ
+
+    &:hover {
+      z-index: var(--z-index-1);
+      border-top: 3px solid var(--accent-color-10);
+      border-radius: 0 0 13px 13px;
+      box-shadow: 0 38px 65px 0 #06080adb;
+      transform: scale(1.16);
+
+      @include tablet {
+        transform: scale(1.06);
+      }
+    }
 
     &-icon {
       margin-bottom: 21px;
@@ -80,6 +228,10 @@
       font-size: 20px;
       line-height: 1.05;
       letter-spacing: -0.02em;
+
+      @include mobile {
+        font-size: 18px;
+      }
     }
 
     &-date {
@@ -87,6 +239,10 @@
       line-height: 1.35;
       letter-spacing: -0.02em;
       opacity: 0.34;
+
+      @include mobile {
+        font-size: 14px;
+      }
     }
 
     &-link {
@@ -101,6 +257,45 @@
 
       &:hover {
         text-decoration: none;
+      }
+    }
+  }
+
+  &__pagination {
+    @include flex-all-center;
+    gap: 5px;
+
+    &-link {
+      @include flex-all-center;
+      border-radius: 4px;
+      width: 32px;
+      height: 32px;
+      font-size: 15px;
+      line-height: 1.3333;
+      color: var(--text-color-40);
+      background-color: var(--bg-color-130);
+      transition:
+        color var(--transition),
+        background-color var(--transition);
+
+      &--active {
+        color: var(--text-color-100);
+        background-color: var(--accent-color-10);
+      }
+
+      &--not-active {
+        background-color: var(--bg-color-140);
+        opacity: 0.5;
+        pointer-events: none;
+
+        & path {
+          fill: var(--text-color-110);
+        }
+      }
+
+      &:hover {
+        color: var(--text-color-100);
+        background-color: var(--accent-color-10);
       }
     }
   }

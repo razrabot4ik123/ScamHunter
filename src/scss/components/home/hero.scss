@@ -10,6 +10,7 @@
       position: absolute;
       top: 50px;
       right: 20px;
+      pointer-events: none;
 
       @include small-desktop {
         width: 800px;
@@ -51,6 +52,7 @@
 
       &-text {
         width: 100%;
+        pointer-events: none;
       }
     }
   }

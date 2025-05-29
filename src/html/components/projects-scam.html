@@ -1,5 +1,5 @@
 <section class="projects-scam">
-  <div class="container">
+  <div class="container projects-scam__container">
     <div class="projects-scam__wrapper">
       <div class="projects-scam__top">
         <div class="projects-scam__info">
@@ -8,9 +8,30 @@
         </div>
         <div class="projects-scam__actions">
           <form class="projects-scam__search" role="search">
-            <label class="rojects-scam__search-label">
+            <label class="projects-scam__search-label">
+              <button class="projects-scam__search-button">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_2112_265)">
+                    <path
+                      d="M13.5531 12.7518L10.2211 9.28631C11.078 8.26945 11.5477 6.98229 11.5472 5.65249C11.5472 2.53576 9.01142 0 5.89468 0C2.77795 0 0.242188 2.53576 0.242188 5.65249C0.242188 8.76923 2.77795 11.305 5.89468 11.305C7.06475 11.305 8.17976 10.9521 9.13307 10.2821L12.4904 13.7739C12.6307 13.9196 12.8195 14 13.0217 14C13.2132 14 13.3948 13.927 13.5327 13.7943C13.6734 13.6586 13.7546 13.4727 13.7584 13.2773C13.7622 13.0818 13.6884 12.8929 13.5531 12.7518ZM5.89468 1.47456C8.19844 1.47456 10.0726 3.34873 10.0726 5.65249C10.0726 7.95625 8.19844 9.83043 5.89468 9.83043C3.59092 9.83043 1.71675 7.95625 1.71675 5.65249C1.71675 3.34873 3.59092 1.47456 5.89468 1.47456Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2112_265">
+                      <rect width="14" height="14" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
               <input
-                class="rojects-scam__search-input"
+                class="projects-scam__search-input"
                 placeholder="Поиск"
                 type="search"
                 autocomplete="off"
@@ -168,10 +189,15 @@
             <a class="projects-scam__card-link" href="#">Подробнее</a>
           </li>
         </ul>
-        <a class="projects-scam__button projects-scam__button--mobile button" href="#">Добавить скам-проект</a>
+        <a class="projects-scam__button projects-scam__button--mobile button" href="#"
+          >Добавить скам-проект</a
+        >
         <ul class="projects-scam__pagination">
           <li class="projects-scam__pagination-item">
-            <a class="projects-scam__link projects-scam__link--prev" href="#">
+            <a
+              class="projects-scam__pagination-link projects-scam__pagination-link--not-active projects-scam__pagination-link--prev"
+              href="#"
+            >
               <svg
                 width="9"
                 height="12"
@@ -187,22 +213,30 @@
             </a>
           </li>
           <li class="projects-scam__pagination-item">
-            <a class="projects-scam__link" href="#">1</a>
+            <a
+              class="projects-scam__pagination-link projects-scam__pagination-link--active"
+              href="#"
+              >1</a
+            >
           </li>
           <li class="projects-scam__pagination-item">
-            <a class="projects-scam__link" href="#">2</a>
+            <a class="projects-scam__pagination-link" href="#">2</a>
           </li>
           <li class="projects-scam__pagination-item">
-            <a class="projects-scam__link projects-scam__link--center" href="#">...</a>
+            <a
+              class="projects-scam__pagination-link projects-scam__pagination-link--center"
+              href="#"
+              >...</a
+            >
           </li>
           <li class="projects-scam__pagination-item">
-            <a class="projects-scam__link" href="#">9</a>
+            <a class="projects-scam__pagination-link" href="#">9</a>
           </li>
           <li class="projects-scam__pagination-item">
-            <a class="projects-scam__link" href="#">10</a>
+            <a class="projects-scam__pagination-link" href="#">10</a>
           </li>
           <li class="projects-scam__pagination-item">
-            <a class="projects-scam__link projects-scam__link--next" href="#">
+            <a class="projects-scam__pagination-link projects-scam__pagination-link--next" href="#">
               <svg
                 width="9"
                 height="12"

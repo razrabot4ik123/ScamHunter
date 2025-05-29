@@ -6,6 +6,16 @@
 @import './components/header';
 @import './components/home/hero';
 @import './components/projects-scam';
+@import './components/projects-shield';
 @import './components/home/about';
 @import './components/home/support';
 @import './components/footer';
+
+// custom
+.projects-scam {
+  margin-bottom: 40px;
+}
+
+.projects-shield {
+  margin-bottom: 106px;
+}
