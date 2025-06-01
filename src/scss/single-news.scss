@@ -1,0 +1,9 @@
+@import 'mixins';
+@import 'base';
+@import 'globals';
+
+// components
+@import 'components/header';
+@import 'components/single-news/hero';
+@import 'components/single-news/information';
+@import 'components/footer';

@@ -10,10 +10,11 @@
   --text-color-80: #ffffffa1;
   --text-color-90: #fff6;
   --text-color-100: #243214;
-  --text-color-110: #bdbdbd;;
+  --text-color-110: #bdbdbd;
   --text-color-120: #ffffff75;
   --text-color-130: #666;
   --text-color-140: #ffffff6e;
+  --text-color-150: #ffffffbf;;
 
   // accent text color
   --accent-color-10: #98ed3a;
@@ -64,6 +65,9 @@
   @include mobile {
     --container-width: 480px;
   }
+
+  // single-container
+  --single-container-width: 1168px;
 
   // transition
   --transition: 0.2s ease-in-out;

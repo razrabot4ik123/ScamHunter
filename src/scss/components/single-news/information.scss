@@ -1,0 +1,24 @@
+.information {
+  margin-bottom: 80px;
+
+  &__container {
+    @include flex-justify-between;
+    gap: 30px;
+  }
+
+  &__title {
+    max-width: 13%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.44;
+  }
+
+  &__right {
+    max-width: 71%;
+  }
+
+  &__description {
+    line-height: 1.44;
+    color: var(--text-color-150);
+  }
+}

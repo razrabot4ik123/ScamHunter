@@ -69,11 +69,11 @@
       &:nth-child(n + 7) {
         display: none;
       }
+    }
 
-      @media (max-width: 640px) {
-        &:nth-child(n + 4) {
-          display: none;
-        }
+    @media (max-width: 640px) {
+      &:nth-child(n + 4) {
+        display: none;
       }
     }
 
@@ -152,6 +152,7 @@
       }
 
       &-separator {
+        flex-shrink: 0;
         width: 2px;
         height: 19px;
         background: linear-gradient(0deg, #fff0 0%, #cacaca69 51%, #fff0 100%);
