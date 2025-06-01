@@ -6,4 +6,10 @@
 @import './components/header';
 @import './components/hunt/hero';
 @import './components/projects-scam';
+@import './components/hunt/stages';
 @import './components/footer';
+
+// custom css
+.projects-scam {
+  padding-bottom: 108px;
+}

@@ -1,5 +1,6 @@
 .hero {
   overflow: hidden;
+  padding-top: 60px;
 
   &__container {
     position: relative;
@@ -11,7 +12,27 @@
       bottom: 0;
       left: 0;
       height: 400px;
-      background: linear-gradient(180deg, #04040800 14.11%, #040408da 54.27%);
+      background: linear-gradient(180deg, #04040800 14.11%, #040408da 55.27%);
+
+      @include small-desktop {
+        height: 300px;
+      }
+
+      @include mini-desktop {
+        height: 250px;
+      }
+
+      @include tablet {
+        height: 200px;
+      }
+
+      @include small-tablet {
+        height: 150px;
+      }
+
+      @include mobile {
+        height: 100px;
+      }
     }
   }
 
@@ -22,6 +43,34 @@
       right: 50%;
       transform: translateX(50%);
       pointer-events: none;
+
+      @include small-desktop {
+        top: 80px;
+        width: 634px;
+        height: 634px;
+      }
+
+      @include mini-desktop {
+        width: 534px;
+        height: 534px;
+      }
+
+      @include tablet {
+        top: 60px;
+        width: 434px;
+        height: 434px;
+      }
+
+      @include small-tablet {
+        width: 334px;
+        height: 334px;
+      }
+
+      @include mobile {
+        top: 40px;
+        width: 204px;
+        height: 204px;
+      }
 
       &-text {
         width: 100%;
@@ -39,15 +88,62 @@
     line-height: 1.05;
     letter-spacing: -0.02em;
 
+    @include tablet {
+      max-width: 413px;
+      font-size: 18px;
+    }
+
+    @include small-tablet {
+      max-width: 368px;
+      font-size: 16px;
+    }
+
+    @include mobile {
+      max-width: 322px;
+      font-size: 14px;
+    }
+
     &--left {
       top: 10px;
       left: 15px;
+
+      @include small-desktop {
+        top: 0;
+      }
+
+      @include small-tablet {
+        top: -10px;
+      }
+
+      @include mobile {
+        top: -21px;
+      }
     }
 
     &--right {
       right: 15px;
       bottom: 180px;
       text-align: right;
+
+      @include small-desktop {
+        bottom: 140px;
+      }
+
+      @include mini-desktop {
+        bottom: 100px;
+      }
+
+      @include tablet {
+        bottom: 80px;
+      }
+
+      @include small-tablet {
+        bottom: 50px;
+      }
+
+      @include mobile {
+        bottom: 30px;
+      }
     }
 
     & span {

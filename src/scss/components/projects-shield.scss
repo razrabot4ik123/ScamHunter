@@ -54,7 +54,7 @@
     color: var(--accent-color-40);
 
     @include mobile {
-      font-size: 22px;
+      font-size: 20px;
     }
   }
 
@@ -65,7 +65,7 @@
     letter-spacing: -0.02em;
 
     @include mobile {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 
@@ -105,7 +105,7 @@
 
     &-button {
       position: absolute;
-      top: 53%;
+      top: 55%;
       left: 16px;
       padding: 0;
       transform: translateY(-50%);
