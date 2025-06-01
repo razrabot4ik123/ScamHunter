@@ -5,30 +5,50 @@
     font-size: 20px;
     line-height: 1.05;
     color: var(--text-color-50);
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__wrapper {
     @include flex-justify-between;
-    gap: 30px;
+    gap: 22px 30px;
     align-items: flex-start;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__left {
     position: sticky;
     top: 40px;
-    width: 50%;
+    width: 54%;
+
+    @include tablet {
+      position: relative;
+      top: 0;
+      width: 100%;
+    }
 
     &::before {
       content: '';
       position: absolute;
       top: -200px;
       left: -300px;
+      z-index: var(--z-index-minus-1);
       border-radius: 50%;
       width: 477px;
       height: 604px;
       background-color: var(--bg-color-180);
       opacity: 0.11;
       filter: blur(350px);
+      pointer-events: none;
+
+      @include tablet {
+        display: none;
+      }
     }
 
     &-title {
@@ -36,6 +56,33 @@
       -webkit-text-fill-color: transparent;
       background: linear-gradient(180deg, #fff 80.41%, #fff0 81.75%, #fff 96.09%);
       background-clip: text;
+
+      @include small-desktop {
+        font-size: 61px;
+      }
+
+      @include mini-desktop {
+        font-size: 50px;
+      }
+
+      @include tablet {
+        font-size: 45px;
+      }
+
+      @include mobile {
+        margin-bottom: 35px;
+      }
+
+      @media (max-width: 483px) {
+        -webkit-text-fill-color: transparent;
+        background: linear-gradient(
+          180deg,
+          #fff 90.16%,
+          #fff0 90.78%,
+          #fff 97.34%
+        );
+        background-clip: text;
+      }
     }
 
     &-description {
@@ -44,17 +91,55 @@
       margin-bottom: 26px;
       max-width: 577px;
       line-height: 1.44;
+
+      @include small-tablet {
+        gap: 16px 30px;
+        margin-bottom: 0;
+      }
+
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      & svg {
+        flex-shrink: 0;
+
+        @include mobile {
+          & rect {
+            stroke: var(--accent-color-10);
+          }
+        }
+      }
+    }
+  }
+
+  &__disclaimer {
+    max-width: 526px;
+    line-height: 1.44;
+    opacity: 0.64;
+
+    @include small-tablet {
+      display: none;
     }
 
-    &-disclaimer {
-      max-width: 526px;
-      line-height: 1.44;
-      opacity: 0.64;
+    &--mobile {
+      display: none;
+      margin-top: 30px;
+      opacity: 1;
+
+      @include small-tablet {
+        display: block;
+      }
     }
   }
 
   &__right {
     width: 46%;
+
+    @include tablet {
+      width: 100%;
+    }
 
     &-item {
       @include flex-justify-between;
@@ -62,6 +147,10 @@
 
       &:not(:last-child) {
         margin-bottom: 30px;
+
+        @include mobile {
+          margin-bottom: 15px;
+        }
 
         .stages__right-count::after {
           content: '';
@@ -77,6 +166,18 @@
             transparent 6px
           );
           transform: translateY(100%);
+
+          @include mini-desktop {
+            height: 300px;
+          }
+
+          @include tablet {
+            height: 220px;
+          }
+
+          @include small-tablet {
+            height: 234px;
+          }
         }
       }
 
@@ -103,6 +204,10 @@
       color: var(--bg-color-10);
       background-color: var(--accent-color-10);
 
+      @include mobile {
+        display: none;
+      }
+
       &::before {
         content: '';
         position: absolute;
@@ -121,6 +226,18 @@
     border-radius: 20px;
     padding: 34px 54px 33px 39px;
 
+    @include mobile {
+      padding: 29px 43px 47px 20px;
+    }
+
+    & svg {
+      @include mobile {
+        & path {
+          fill: var(--accent-color-10);
+        }
+      }
+    }
+
     &-title {
       @include flex-align-center;
       gap: 11px;
@@ -128,6 +245,11 @@
       font-weight: 400;
       font-size: 24px;
       line-height: 1.22;
+
+      @include mobile {
+        margin-bottom: 28px;
+        font-size: 22px;
+      }
     }
 
     &-description {
