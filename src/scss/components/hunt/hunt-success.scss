@@ -1,9 +1,95 @@
 .hunt-success {
-  margin-bottom: 90px;
+  overflow: hidden;
+  padding-top: 104px;
+  padding-bottom: 90px;
+
+  @include tablet {
+    padding-top: 77px;
+    padding-bottom: 157px;
+  }
 
   &__container {
+    position: relative;
+
     @include small-mobile {
       padding: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -230px;
+      left: -230px;
+      z-index: var(--z-index-minus-1);
+      display: block;
+      width: 483px;
+      height: 757px;
+      background-image: url('./assets/images/hunt-success-decor-left.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: rotate(40deg);
+
+      @include small-desktop {
+        left: -170px;
+      }
+
+      @include mini-desktop {
+        left: -200px;
+      }
+
+      @include tablet {
+        top: -190px;
+      }
+
+      @include small-tablet {
+        top: -100px;
+        right: -100px;
+        left: auto;
+        width: 279px;
+        height: 437px;
+        background-image: url('./assets/images/hunt-success-decor-top.png');
+        transform: rotate(-30deg);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -230px;
+      right: -230px;
+      z-index: var(--z-index-minus-1);
+      display: block;
+      width: 483px;
+      height: 757px;
+      background-image: url('./assets/images/hunt-success-decor-right.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: rotate(-40deg);
+
+      @include small-desktop {
+        right: -170px;
+      }
+
+      @include mini-desktop {
+        right: -200px;
+      }
+
+      @include tablet {
+        top: -190px;
+      }
+
+      @include small-tablet {
+        inset: auto 0 -380px 50px;
+        width: 426px;
+        height: 668px;
+        background-image: url('./assets/images/hunt-success-decor-top.png');
+        transform: rotate(70deg);
+      }
+
+      @include mobile {
+        bottom: -360px;
+        left: 40px;
+      }
     }
   }
 
@@ -91,21 +177,21 @@
     overflow: hidden;
     border-radius: 13px;
 
-        // ВРЕМЕННО
+    // ВРЕМЕННО
 
-        @include mini-desktop {
-          &:nth-child(n + 7) {
-            display: none;
-          }
-        }
+    @include mini-desktop {
+      &:nth-child(n + 7) {
+        display: none;
+      }
+    }
 
-        @include mobile {
-          &:nth-child(n + 4) {
-            display: none;
-          }
-        }
-    
-        // КОНЕЦ ВРЕМЕННО
+    @include mobile {
+      &:nth-child(n + 4) {
+        display: none;
+      }
+    }
+
+    // КОНЕЦ ВРЕМЕННО
 
     &-link {
       position: relative;
