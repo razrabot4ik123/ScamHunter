@@ -1,3 +1,96 @@
 .hero {
-  
+  &__container {
+    position: relative;
+  }
+
+  &__description {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    max-width: 380px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+
+    @include mini-desktop {
+      top: 0;
+      max-width: 300px;
+      font-size: 26px;
+    }
+
+    @include tablet {
+      font-size: 24px;
+    }
+
+    @include small-tablet {
+      max-width: 250px;
+      font-size: 20px;
+    }
+
+    @include mobile {
+      top: -5px;
+      max-width: 200px;
+      font-size: 16px;
+    }
+
+    @include small-mobile {
+      max-width: 150px;
+      font-size: 14px;
+    }
+
+    & span {
+      color: var(--text-color-20);
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 15px;
+    bottom: 150px;
+    border: 2px solid var(--accent-color-10);
+    border-radius: 14px;
+    padding: 20px 40px;
+    width: 100%;
+    max-width: 274px;
+    font-size: 18px;
+    transition:
+      color var(--transition),
+      background-color var(--transition);
+
+    @include small-desktop {
+      bottom: 120px;
+    }
+
+    @include mini-desktop {
+      bottom: 80px;
+    }
+
+    @include tablet {
+      position: relative;
+      bottom: auto;
+      margin-left: auto;
+      padding: 16px 20px;
+    }
+
+    @include small-tablet {
+      max-width: 241px;
+      font-size: 16px;
+    }
+
+    @include mobile {
+      padding: 14px 20px;
+      max-width: 211px;
+    }
+
+    @include small-mobile {
+      max-width: 190px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: var(--accent-color-10);
+      background-color: var(--text-color-30);
+    }
+  }
 }
