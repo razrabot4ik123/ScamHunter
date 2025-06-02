@@ -1,4 +1,8 @@
 .stages {
+  @include small-mobile {
+    overflow: hidden;
+  }
+
   &__title {
     margin-bottom: 10px;
     font-weight: 400;
@@ -36,7 +40,7 @@
       content: '';
       position: absolute;
       top: -200px;
-      left: -300px;
+      left: -450px;
       z-index: var(--z-index-minus-1);
       border-radius: 50%;
       width: 477px;
@@ -48,6 +52,38 @@
 
       @include tablet {
         display: none;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: var(--z-index-minus-1);
+      display: none;
+      width: 357px;
+      height: 357px;
+      background-image: url('./assets/icons/sight-icon.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @include tablet {
+        display: block;
+      }
+
+      @include small-tablet {
+        width: 307px;
+        height: 307px;
+      }
+
+      @include mobile {
+        width: 257px;
+        height: 257px;
+      }
+
+      @include small-mobile {
+        right: -50px;
       }
     }
 
@@ -75,12 +111,7 @@
 
       @media (max-width: 483px) {
         -webkit-text-fill-color: transparent;
-        background: linear-gradient(
-          180deg,
-          #fff 90.16%,
-          #fff0 90.78%,
-          #fff 97.34%
-        );
+        background: linear-gradient(180deg, #fff 90.16%, #fff0 90.78%, #fff 97.34%);
         background-clip: text;
       }
     }
