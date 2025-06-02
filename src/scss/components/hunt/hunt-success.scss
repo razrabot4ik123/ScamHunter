@@ -24,7 +24,7 @@
       display: block;
       width: 483px;
       height: 757px;
-      background-image: url('./assets/images/hunt-success-decor-left.png');
+      background-image: url('../assets/images/hunt-success-decor-left.png');
       background-size: cover;
       background-repeat: no-repeat;
       transform: rotate(40deg);
@@ -47,7 +47,7 @@
         left: auto;
         width: 279px;
         height: 437px;
-        background-image: url('./assets/images/hunt-success-decor-top.png');
+        background-image: url('../assets/images/hunt-success-decor-top.png');
         transform: rotate(-30deg);
       }
     }
@@ -61,7 +61,7 @@
       display: block;
       width: 483px;
       height: 757px;
-      background-image: url('./assets/images/hunt-success-decor-right.png');
+      background-image: url('../assets/images/hunt-success-decor-right.png');
       background-size: cover;
       background-repeat: no-repeat;
       transform: rotate(-40deg);
@@ -82,13 +82,17 @@
         inset: auto 0 -380px 50px;
         width: 426px;
         height: 668px;
-        background-image: url('./assets/images/hunt-success-decor-top.png');
+        background-image: url('../assets/images/hunt-success-decor-top.png');
         transform: rotate(70deg);
       }
 
       @include mobile {
         bottom: -360px;
         left: 40px;
+      }
+
+      @include small-mobile {
+        left: 0;
       }
     }
   }

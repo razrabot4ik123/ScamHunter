@@ -18,6 +18,7 @@ export default defineConfig({
         news: './src/news.html',
         hunt: './src/hunt.html',
         'single-news': './src/single-news.html',
+        token: './src/token.html',
       },
     },
   },
