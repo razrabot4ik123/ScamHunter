@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Autoplay, Grid } from 'swiper/modules';
+import { Autoplay, Grid, EffectFade, Pagination, Navigation } from 'swiper/modules';
 
 export const usePartnersSlider = () => {
   let partnersSlider = null;
@@ -68,4 +68,19 @@ export const usePartnersSlider = () => {
 
   window.addEventListener('resize', checkWidth);
   checkWidth();
+};
+
+export const useSinglePageAnalysisSlider = () => {
+  new Swiper('.analysis__right-slider', {
+    modules: [EffectFade, Pagination, Navigation],
+    effect: 'fade',
+    pagination: {
+      el: '.analysis__right-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.analysis__right-button--next',
+      prevEl: '.analysis__right-button--prev',
+    },
+  });
 };

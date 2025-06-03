@@ -4,5 +4,7 @@ import '/scss/single-news.scss';
 
 // components
 import { useBurger } from './components/burger';
+import { useSinglePageAnalysisSlider } from './components/slider';
 
 useBurger();
+useSinglePageAnalysisSlider();

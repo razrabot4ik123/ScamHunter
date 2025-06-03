@@ -1,0 +1,42 @@
+.evaluation {
+  margin-bottom: 80px;
+
+  &__container {
+    @include flex-justify-between;
+    gap: 30px;
+  }
+
+  &__title {
+    max-width: 13%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.44;
+  }
+
+  &__right {
+    max-width: 71%;
+
+    &-title {
+      margin-bottom: 18px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.44;
+    }
+
+    &-description {
+      margin-bottom: 34px;
+      line-height: 1.44;
+      color: var(--text-color-150);
+    }
+
+    &-quote {
+      margin: 0;
+      border-left: 2px solid var(--accent-color-10);
+      padding: 39px 136px 38px 40px;
+      min-width: 704px;
+      font-size: 16px;
+      line-height: 1.44;
+      background: var(--bg-color-210);
+    }
+  }
+}
