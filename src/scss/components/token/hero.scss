@@ -3,6 +3,10 @@
     position: relative;
   }
 
+  &__title-decor {
+    pointer-events: none;
+  }
+
   &__description {
     position: absolute;
     top: 10px;

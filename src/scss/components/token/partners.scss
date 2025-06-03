@@ -1,6 +1,12 @@
 .partners {
   margin-bottom: 155px;
 
+  &__container {
+    @include mobile {
+      padding: 0;
+    }
+  }
+
   &__wrapper {
     overflow: hidden;
     border: 2px solid var(--border-color-90);
@@ -9,6 +15,23 @@
     box-shadow: inset 0 4px 4px 0 #00000040;
     background: var(--bg-color-100);
     backdrop-filter: blur(46px);
+
+    @include mini-desktop {
+      padding: 46px 52px 60px;
+    }
+
+    @include tablet {
+      padding: 36px 32px 50px;
+    }
+
+    @include mobile {
+      border-radius: 18px;
+      padding: 26px 20px 40px;
+    }
+
+    @include small-mobile {
+      border-radius: 0;
+    }
   }
 
   &__title {
@@ -18,6 +41,18 @@
     line-height: 1.05;
     letter-spacing: -0.02em;
     color: var(--accent-color-10);
+
+    @include tablet {
+      font-size: 24px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 26px;
+    }
+
+    @include mobile {
+      font-size: 22px;
+    }
   }
 
   &__slider {
@@ -30,21 +65,51 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      left: -72px;
+      left: -52px;
       z-index: var(--z-index-2);
-      width: 100px;
-      background: linear-gradient(to right, #0c0d10, transparent);
+      display: none;
+      width: 52px;
+      background: linear-gradient(to right, #0c0d10 50%, transparent);
+
+      @include mini-desktop {
+        display: block;
+      }
+
+      @include tablet {
+        left: -42px;
+        width: 42px;
+      }
+
+      @include mobile {
+        left: -20px;
+        width: 32px;
+      }
     }
 
     &::after {
       content: '';
       position: absolute;
       top: 0;
-      right: -72px;
+      right: -52px;
       bottom: 0;
       z-index: var(--z-index-2);
-      width: 100px;
-      background: linear-gradient(to left, #0c0d10, transparent);
+      display: none;
+      width: 52px;
+      background: linear-gradient(to left, #0c0d10 50%, transparent);
+
+      @include mini-desktop {
+        display: block;
+      }
+
+      @include tablet {
+        right: -42px;
+        width: 42px;
+      }
+
+      @include mobile {
+        right: -20px;
+        width: 32px;
+      }
     }
   }
 

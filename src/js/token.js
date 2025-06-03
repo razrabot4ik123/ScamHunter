@@ -1,5 +1,6 @@
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import 'swiper/css/grid';
 import '/scss/token.scss';
 
 // components
