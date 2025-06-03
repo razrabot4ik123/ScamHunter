@@ -1,0 +1,119 @@
+.tokenomics {
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.05;
+    text-align: center;
+    color: var(--text-color-50);
+  }
+
+  &__subtitle {
+    margin-bottom: 62px;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px 24px;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      gap: 16px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    border: 1px solid var(--border-color-110);
+    border-radius: 14px;
+    padding: 10px 15px 63px;
+    text-align: center;
+    background: linear-gradient(180deg, #151517 0%, #151517 100%);
+
+    @include mobile {
+      padding: 10px 15px 45px;
+    }
+
+    &-img {
+      position: relative;
+      height: 260px;
+
+      @include mini-desktop {
+        height: 200px;
+      }
+
+      @include mobile {
+        height: 220px;
+      }
+
+      @include small-mobile {
+        height: 200px;
+      }
+
+      & img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+      }
+    }
+
+    &:last-child {
+      @include tablet {
+        grid-column: span 2;
+      }
+
+      @include mobile {
+        grid-column: 1;
+      }
+
+      & img {
+        top: 55%;
+
+        @include tablet {
+          top: 65%;
+        }
+      }
+    }
+
+    &-title {
+      position: relative;
+      z-index: var(--z-index-1);
+      margin-bottom: 15px;
+      font-family: Furore, sans-serif;
+      font-weight: 400;
+      font-size: 74px;
+      line-height: 1.05;
+      color: var(--accent-color-10);
+
+      @include mini-desktop {
+        font-size: 64px;
+      }
+
+      @include small-tablet {
+        font-size: 60px;
+      }
+
+      @include mobile {
+        margin-bottom: 10px;
+        font-size: 56px;
+      }
+    }
+
+    &-description {
+      font-size: 20px;
+      line-height: 1.44;
+      color: var(--text-color-170);
+
+      @include small-tablet {
+        font-size: 17px;
+      }
+    }
+  }
+}
