@@ -4,7 +4,7 @@ import '/scss/single-check.scss';
 
 // components
 import { useBurger } from './components/burger';
-import { useSinglePageAnalysisSlider } from './components/slider';
+import { useSinglePageTargetSlider } from './components/slider';
 
 useBurger();
-useSinglePageAnalysisSlider();
+useSinglePageTargetSlider();

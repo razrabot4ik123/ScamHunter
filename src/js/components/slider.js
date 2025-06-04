@@ -84,3 +84,18 @@ export const useSinglePageAnalysisSlider = () => {
     },
   });
 };
+
+export const useSinglePageTargetSlider = () => {
+  new Swiper('.target__right-slider', {
+    modules: [EffectFade, Pagination, Navigation],
+    effect: 'fade',
+    pagination: {
+      el: '.target__right-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.target__right-button--next',
+      prevEl: '.target__right-button--prev',
+    },
+  });
+};

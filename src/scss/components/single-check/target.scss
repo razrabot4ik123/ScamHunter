@@ -1,4 +1,4 @@
-.analysis {
+.target {
   margin-bottom: 80px;
 
   @include mobile {
@@ -51,7 +51,7 @@
     }
 
     &-description {
-      max-width: 713px;
+      max-width: 533px;
       font-weight: 500;
       font-size: 18px;
       line-height: 1.44;

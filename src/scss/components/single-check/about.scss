@@ -1,8 +1,8 @@
-.evaluation {
+.about {
   margin-bottom: 80px;
 
   @include mobile {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 
   &__container {
@@ -41,13 +41,11 @@
     &-title {
       margin-bottom: 18px;
       font-weight: 500;
-      font-size: 18px;
       line-height: 1.44;
     }
 
     &-description {
-      margin-bottom: 35px;
-      max-width: 755px;
+      max-width: 575px;
       line-height: 1.44;
       color: var(--text-color-150);
 
@@ -55,27 +53,8 @@
         color: var(--text-color-40);
       }
 
-      @include mobile {
-        margin-bottom: 29px;
-      }
-    }
-
-    &-quote {
-      margin: 0;
-      border-left: 2px solid var(--accent-color-10);
-      padding: 39px 106px 38px 40px;
-      width: 100%;
-      max-width: 700px;
-      font-size: 16px;
-      line-height: 1.44;
-      background: var(--bg-color-210);
-
-      @include mini-desktop {
-        padding: 29px 80px 28px 30px;
-      }
-
-      @include mobile {
-        padding: 25px 20px 25px 26px;
+      &:not(:last-child) {
+        margin-bottom: 18px;
       }
     }
   }
