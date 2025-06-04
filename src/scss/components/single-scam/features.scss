@@ -1,8 +1,8 @@
 .features {
-  margin-bottom: 89px;
+  margin-bottom: 80px;
 
   @include mobile {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 
   &__container {
@@ -51,16 +51,13 @@
     }
 
     &-description {
+      margin-bottom: 35px;
       max-width: 532px;
       line-height: 1.44;
       color: var(--text-color-150);
 
-      &:not(:last-child) {
-        margin-bottom: 35px;
-
-        @include mobile {
-          margin-bottom: 29px;
-        }
+      @include mobile {
+        margin-bottom: 29px;
       }
     }
 

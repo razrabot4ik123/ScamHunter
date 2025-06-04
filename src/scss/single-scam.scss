@@ -1,0 +1,12 @@
+@import 'mixins';
+@import 'base';
+@import 'globals';
+
+// components
+@import 'components/header';
+@import 'components/single-scam/hero';
+@import 'components/single-scam/about';
+@import 'components/single-scam/analysis';
+@import 'components/single-scam/features';
+@import 'components/single-scam/result';
+@import 'components/footer';

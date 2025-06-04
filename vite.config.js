@@ -20,6 +20,7 @@ export default defineConfig({
         'single-news': './src/single-news.html',
         'single-check': './src/single-check.html',
         'single-shield': './src/single-shield.html',
+        'single-scam': './src/single-scam.html',
         token: './src/token.html',
       },
     },

@@ -1,0 +1,61 @@
+.about {
+  margin-bottom: 80px;
+
+  @include mobile {
+    margin-bottom: 50px;
+  }
+
+  &__container {
+    @include flex-justify-between;
+    gap: 20px 30px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      gap: 10px;
+    }
+  }
+
+  &__title {
+    max-width: 13%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.44;
+
+    @include tablet {
+      max-width: 100%;
+      opacity: 0.52;
+    }
+  }
+
+  &__right {
+    width: 100%;
+    max-width: 71%;
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+    &-title {
+      margin-bottom: 18px;
+      font-weight: 500;
+      line-height: 1.44;
+    }
+
+    &-description {
+      max-width: 575px;
+      line-height: 1.44;
+      color: var(--text-color-150);
+
+      @include tablet {
+        color: var(--text-color-40);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 18px;
+      }
+    }
+  }
+}
