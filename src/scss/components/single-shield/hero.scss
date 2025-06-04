@@ -1,0 +1,69 @@
+.hero {
+  padding-bottom: 92px;
+
+  &__container {
+    position: relative;
+    min-height: 456px;
+
+    @include tablet {
+      min-height: 356px;
+    }
+
+    @include small-tablet {
+      min-height: 306px;
+    }
+
+    @include mobile {
+      min-height: 215px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #0000 0%, #000 100%);
+    }
+  }
+
+  &__title {
+    position: absolute;
+    bottom: -25px;
+    left: 3px;
+    z-index: var(--z-index-1);
+    max-width: 1006px;
+    font-weight: 500;
+    font-size: 45px;
+
+    @include tablet {
+      max-width: 691px;
+      font-size: 35px;
+    }
+
+    @include small-tablet {
+      max-width: 632px;
+      font-size: 32px;
+    }
+
+    @include mobile {
+      bottom: -30px;
+      font-size: 28px;
+    }
+
+    @include small-mobile {
+      bottom: -45px;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+
+    @include mobile {
+      border-radius: 6px;
+    }
+  }
+}
