@@ -1,9 +1,21 @@
 .information {
   margin-bottom: 80px;
 
+  @include mobile {
+    margin-bottom: 40px;
+  }
+
   &__container {
     @include flex-justify-between;
-    gap: 30px;
+    gap: 20px 30px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      gap: 10px;
+    }
   }
 
   &__title {
@@ -11,14 +23,42 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 1.44;
+
+    @include tablet {
+      max-width: 100%;
+      opacity: 0.52;
+    }
   }
 
   &__right {
+    width: 100%;
     max-width: 71%;
+
+    @include tablet {
+      max-width: 100%;
+    }
   }
 
   &__description {
     line-height: 1.44;
     color: var(--text-color-150);
+
+    @include tablet {
+      color: var(--text-color-40);
+    }
+
+    &--more {
+      padding: 0;
+      font-weight: 500;
+      text-decoration-style: dotted;
+      text-decoration-line: underline;
+      text-underline-position: from-font;
+      color: var(--accent-color-10);
+      text-decoration-thickness: 10%;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }

@@ -1,9 +1,21 @@
 .reactions {
   margin-bottom: 127px;
 
+  @include mobile {
+    margin-bottom: 47px;
+  }
+
   &__container {
     @include flex-justify-between;
-    gap: 30px;
+    gap: 20px 30px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      gap: 10px;
+    }
   }
 
   &__title {
@@ -11,11 +23,20 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 1.44;
+
+    @include tablet {
+      max-width: 100%;
+      opacity: 0.52;
+    }
   }
 
   &__right {
     width: 100%;
     max-width: 71%;
+
+    @include tablet {
+      max-width: 100%;
+    }
 
     &-list {
       @include flex-align-center;
@@ -33,6 +54,10 @@
       color: var(--text-color-140);
       background: var(--bg-color-160);
       transition: opacity var(--transition);
+
+      @include mobile {
+        font-size: 15px;
+      }
 
       &:hover {
         opacity: 0.8;
@@ -60,5 +85,9 @@
     font-size: 18px;
     line-height: 1.44;
     opacity: 0.66;
+
+    @include tablet {
+      opacity: 1;
+    }
   }
 }

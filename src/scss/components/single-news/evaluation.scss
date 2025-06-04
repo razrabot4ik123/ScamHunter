@@ -1,9 +1,21 @@
 .evaluation {
   margin-bottom: 80px;
 
+  @include mobile {
+    margin-bottom: 40px;
+  }
+
   &__container {
     @include flex-justify-between;
-    gap: 30px;
+    gap: 20px 30px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      gap: 10px;
+    }
   }
 
   &__title {
@@ -11,10 +23,20 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 1.44;
+
+    @include tablet {
+      max-width: 100%;
+      opacity: 0.52;
+    }
   }
 
   &__right {
+    width: 100%;
     max-width: 71%;
+
+    @include tablet {
+      max-width: 100%;
+    }
 
     &-title {
       margin-bottom: 18px;
@@ -27,16 +49,39 @@
       margin-bottom: 34px;
       line-height: 1.44;
       color: var(--text-color-150);
+
+      @include tablet {
+        color: var(--text-color-40);
+      }
+
+      @include mobile {
+        margin-bottom: 29px;
+      }
+
+      & br {
+        @include tablet {
+          line-height: 1;
+        }
+      }
     }
 
     &-quote {
       margin: 0;
       border-left: 2px solid var(--accent-color-10);
-      padding: 39px 136px 38px 40px;
-      min-width: 704px;
+      padding: 39px 106px 38px 40px;
+      width: 100%;
+      max-width: 700px;
       font-size: 16px;
       line-height: 1.44;
       background: var(--bg-color-210);
+
+      @include mini-desktop {
+        padding: 29px 80px 28px 30px;
+      }
+
+      @include mobile {
+        padding: 25px 20px 25px 26px;
+      }
     }
   }
 }

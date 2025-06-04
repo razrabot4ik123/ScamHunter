@@ -1,12 +1,10 @@
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import '/scss/single-news.scss';
+import '/scss/single-check.scss';
 
 // components
 import { useBurger } from './components/burger';
-import { useReadMoreBtn } from './components/single-pages/readMoreBtn';
 import { useSinglePageAnalysisSlider } from './components/slider';
 
 useBurger();
-useReadMoreBtn();
 useSinglePageAnalysisSlider();
