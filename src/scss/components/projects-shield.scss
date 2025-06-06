@@ -38,7 +38,7 @@
     gap: 174px;
 
     @include mini-desktop {
-      gap: 60px;
+      gap: 30px 60px;
     }
 
     @include small-tablet {
