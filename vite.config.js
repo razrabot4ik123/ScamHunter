@@ -23,6 +23,7 @@ export default defineConfig({
         'single-scam': './src/single-scam.html',
         token: './src/token.html',
         'hunt-create': './src/hunt-create.html',
+        success: './src/success.html',
       },
     },
   },
