@@ -22,6 +22,7 @@ export default defineConfig({
         'single-shield': './src/single-shield.html',
         'single-scam': './src/single-scam.html',
         token: './src/token.html',
+        'hunt-create': './src/hunt-create.html',
       },
     },
   },

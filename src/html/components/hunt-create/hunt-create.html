@@ -1,0 +1,83 @@
+<section class="hunt-create">
+  <div class="container hunt-create__container">
+    <a class="hunt-create__button-back" href="#">
+      <svg
+        width="34"
+        height="10"
+        viewBox="0 0 34 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.2803 1.28033C5.5732 0.987437 5.5732 0.512558 5.2803 0.219668C4.9874 -0.0732225 4.5126 -0.0732225 4.21967 0.219668L0.21967 4.2197C0.0732198 4.3661 0 4.5581 0 4.75C0 4.8517 0.02024 4.9487 0.05691 5.0371C0.09351 5.1255 0.14776 5.2084 0.21967 5.2803L4.21967 9.2803C4.5126 9.5732 4.9874 9.5732 5.2803 9.2803C5.5732 8.9874 5.5732 8.5126 5.2803 8.2197L2.56066 5.5H32.5858C33 5.5 33.3358 5.1642 33.3358 4.75C33.3358 4.3358 33 4 32.5858 4H2.56066L5.2803 1.28033Z"
+          fill="#98ED3A"
+        />
+      </svg>
+      Вернуться назад
+    </a>
+    <h2 class="hunt-create__title">Создание охоты</h2>
+    <form class="hunt-create__form form">
+      <label class="form__label">
+        Введите название охоты
+        <input class="form__input" placeholder="Охота номер 2" required type="text" />
+      </label>
+      <label class="form__label">
+        Размер добычи
+        <input class="form__input" placeholder="10 500$" required type="number" />
+      </label>
+      <label class="form__label">
+        Телеграм чат или канал
+        <input class="form__input" placeholder="@amastare22" required type="text" />
+      </label>
+      <label class="form__label">
+        Описание
+        <textarea class="form__input form__input--textarea" placeholder="Написать..."></textarea>
+      </label>
+      <div class="form__payment">
+        <h3 class="form__payment-title form__payment-title--mobile">
+          Оплатите работу ScamHunter <br /><br />
+          Переведите 1000 SCHT на:
+        </h3>
+        <div class="form__payment-qr">
+          <img width="214" height="214" src="./assets/images/form-qr.png" alt="Кьюар код" />
+        </div>
+        <div class="form__payment-info">
+          <h3 class="form__payment-title">
+            Оплатите работу ScamHunter <br /><br />
+            Переведите 1000 SCHT на:
+          </h3>
+          <button class="form__payment-address">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_2184_787)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.36364 1.45455C4.36364 1.06878 4.51688 0.698807 4.78966 0.426027C5.06244 0.153246 5.43241 0 5.81818 0H14.5455C14.9312 0 15.3012 0.153246 15.574 0.426027C15.8468 0.698807 16 1.06878 16 1.45455V10.1818C16 10.5676 15.8468 10.9376 15.574 11.2103C15.3012 11.4831 14.9312 11.6364 14.5455 11.6364H13.8182C13.6253 11.6364 13.4403 11.5597 13.3039 11.4234C13.1675 11.287 13.0909 11.102 13.0909 10.9091V5.45455C13.0909 4.77945 12.8227 4.132 12.3454 3.65464C11.868 3.17727 11.2206 2.90909 10.5455 2.90909H5.09091C4.89802 2.90909 4.71304 2.83247 4.57665 2.69608C4.44026 2.55969 4.36364 2.3747 4.36364 2.18182V1.45455ZM0 5.81818C0 5.43241 0.153246 5.06244 0.426027 4.78966C0.698807 4.51688 1.06878 4.36364 1.45455 4.36364H10.1818C10.5676 4.36364 10.9376 4.51688 11.2103 4.78966C11.4831 5.06244 11.6364 5.43241 11.6364 5.81818V14.5455C11.6364 14.9312 11.4831 15.3012 11.2103 15.574C10.9376 15.8468 10.5676 16 10.1818 16H1.45455C1.06878 16 0.698807 15.8468 0.426027 15.574C0.153246 15.3012 0 14.9312 0 14.5455V5.81818Z"
+                  fill="#515151"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_2184_787">
+                  <rect width="16" height="16" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <span>6J22ZbtU5uzQMs3BvzcstZG6PvdanucZgeQ8J1Z5z5RV</span>
+          </button>
+          <a class="form__payment-button" href="#"> Вставьте Хеш транзакции в solscan.io </a>
+        </div>
+      </div>
+      <label class="form__check-label">
+        <input class="form__check-input" type="checkbox" required />
+        Я подтверждаю что ознакомлен с правилами создания охоты 
+      </label>
+      <button class="form__button button" type="submit">Запустить охоту</button>
+    </form>
+  </div>
+</section>

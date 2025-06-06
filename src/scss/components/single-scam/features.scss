@@ -62,7 +62,7 @@
     }
 
     &-quote {
-      margin: 0 0 35px;
+      margin: 0;
       border-left: 2px solid var(--accent-color-10);
       padding: 39px 106px 38px 40px;
       width: 100%;
@@ -76,7 +76,6 @@
       }
 
       @include mobile {
-        margin-bottom: 29px;
         padding: 25px 20px 25px 26px;
       }
     }

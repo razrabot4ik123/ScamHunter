@@ -1,0 +1,278 @@
+.hunt-create {
+  margin-bottom: 100px;
+
+  @include mobile {
+    margin-bottom: 70px;
+  }
+
+  &__container {
+    border: 2px solid var(--border-color-90);
+    border-radius: 30px;
+    padding: 47px 115px 69px 145px;
+    max-width: 830px;
+    box-shadow: inset 0 4px 4px 0 #00000040;
+    background: var(--bg-color-120);
+    backdrop-filter: blur(46px);
+
+    @include tablet {
+      border-radius: 20px;
+      padding: 47px 55px 59px 65px;
+      max-width: 770px;
+    }
+
+    @include small-tablet {
+      border-radius: 10px;
+      padding: 54px 15px 42px;
+      max-width: 670px;
+    }
+  }
+
+  &__button-back {
+    @include flex-align-center;
+    gap: 7px;
+    margin-bottom: 39px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--accent-color-10);
+    transition: color var(--transition);
+
+    & path {
+      transition: fill var(--transition);
+    }
+
+    &:hover {
+      color: var(--text-color-40);
+
+      & path {
+        fill: var(--text-color-40);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 41px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+
+    @include small-tablet {
+      margin-bottom: 28px;
+    }
+  }
+}
+
+.form {
+  @include flex-column;
+  gap: 20px;
+
+  &__label {
+    @include flex-column;
+    gap: 6px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--text-color-190);
+  }
+
+  &__input {
+    appearance: textfield;
+    border: 2px solid var(--border-color-90);
+    border-radius: 7px;
+    padding: 13px 20px;
+    box-shadow: inset 0 4px 4px 0 #00000040;
+    color: var(--text-color-40);
+    background: var(--bg-color-220);
+    transition: border-color var(--transition);
+    backdrop-filter: blur(46px);
+
+    &:focus {
+      border-color: var(--accent-color-10);
+    }
+
+    &--textarea {
+      outline: none;
+      height: 196px;
+      min-height: 196px;
+      resize: vertical;
+    }
+  }
+
+  &__payment {
+    @include flex-justify-between-align-center;
+    gap: 28px 29px;
+    margin-top: 14px;
+    margin-bottom: 6px;
+
+    @include mobile {
+      flex-direction: column;
+      margin-top: 18px;
+      margin-bottom: 7px;
+    }
+
+    &-qr {
+      flex-shrink: 0;
+      border-radius: 5px;
+      background-color: var(--bg-color-180);
+
+      @include mobile {
+        margin-bottom: 13px;
+      }
+    }
+
+    &-info {
+      width: 100%;
+    }
+
+    &-title {
+      margin-bottom: 15px;
+      font-weight: 400;
+      line-height: 0.82;
+
+      @include mobile {
+        display: none;
+      }
+
+      &--mobile {
+        display: none;
+        margin-bottom: 0;
+        text-align: center;
+
+        @include mobile {
+          display: block;
+        }
+      }
+    }
+
+    &-address {
+      @include flex-align-center;
+      gap: 11px;
+      margin-bottom: 28px;
+      border: 2px solid var(--border-color-90);
+      border-radius: 7px;
+      padding: 17px 15px;
+      width: 100%;
+      box-shadow: inset 0 4px 4px 0 #00000040;
+      line-height: 1.22;
+      color: var(--accent-color-10);
+      background: var(--bg-color-220);
+      transition: color var(--transition);
+      backdrop-filter: blur(46px);
+
+      @include mobile {
+        margin-bottom: 15px;
+      }
+
+      & svg {
+        flex-shrink: 0;
+      }
+
+      & path {
+        transition: fill var(--transition);
+      }
+
+      &:hover {
+        color: var(--text-color-40);
+
+        & path {
+          fill: var(--accent-color-10);
+        }
+      }
+
+      & span {
+        max-width: 200px;
+        word-wrap: break-word;
+        white-space: normal;
+        text-align: start;
+
+        @include mobile {
+          max-width: 90%;
+        }
+      }
+    }
+
+    &-button {
+      display: inline-block;
+      border-radius: 14px;
+      padding: 17px 25px;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      text-align: center;
+      color: var(--text-color-40);
+      background-color: var(--bg-color-230);
+      transition:
+        background-color var(--transition),
+        color var(--transition);
+
+      @include mobile {
+        width: 100%;
+      }
+
+      &:hover {
+        color: var(--text-color-30);
+        background-color: var(--accent-color-10);
+      }
+    }
+  }
+
+  &__check {
+    &-label {
+      @include flex-align-center;
+      gap: 9px;
+      margin-bottom: 5px;
+      line-height: 1.4;
+      color: var(--text-color-200);
+
+      @include mobile {
+        margin-bottom: 7px;
+      }
+    }
+
+    &-input {
+      appearance: none;
+      position: relative;
+      flex-shrink: 0;
+      border: 1px solid var(--border-color-120);
+      border-radius: 2px;
+      width: 18px;
+      height: 18px;
+      box-shadow: inset 0 4px 4px 0 #00000040;
+      background: var(--bg-color-240);
+      cursor: pointer;
+      backdrop-filter: blur(46px);
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('../assets/icons/check.svg') 50% 50% no-repeat;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity var(--transition),
+          visibility var(--transition);
+      }
+
+      &:checked {
+        &::before {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__button {
+    border-radius: 14px;
+    padding: 17px 30px;
+    transition:
+      color var(--transition),
+      background-color var(--transition);
+
+    &:hover {
+      color: var(--accent-color-10);
+      background-color: var(--text-color-30);
+    }
+  }
+}

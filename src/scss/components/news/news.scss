@@ -140,9 +140,23 @@
     &-meta {
       @include flex-justify-between-align-center;
       margin-bottom: 26px;
+      padding-inline: 5px;
+
+      @include tablet {
+        padding-inline: 10px;
+      }
+
+      @include small-tablet {
+        padding-inline: 5px;
+      }
 
       @media (max-width: 640px) {
         max-width: 377px;
+        padding-inline: 10px;
+      }
+
+      @include small-mobile {
+        padding-inline: 0;
       }
 
       &-item {
