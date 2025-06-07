@@ -4,7 +4,9 @@ import '/scss/single-shield.scss';
 
 // components
 import { useBurger } from './components/burger';
+import { useCookie } from './components/cookie';
 import { useSinglePageTargetSlider } from './components/slider';
 
 useBurger();
+useCookie();
 useSinglePageTargetSlider();
