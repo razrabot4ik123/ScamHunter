@@ -1,5 +1,21 @@
 .about-token {
   padding: 280px 0 100px;
+  background-image:
+    linear-gradient(90deg, #040408 58%, transparent 100%),
+    linear-gradient(180deg, #040408 5%, transparent 100%),
+    linear-gradient(0deg, #040408 5%, transparent 100%),
+    url('../assets/images/about-token-bg-decor.jpg');
+  background-position:
+    left top,
+    left top,
+    left bottom,
+    100% 0;
+  background-size:
+    100% 100%,
+    100% 150px,
+    100% 100px,
+    contain;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 
   &__container {
     @include flex-justify-between;
@@ -40,6 +56,10 @@
   &__description {
     line-height: 1.44;
     color: var(--text-color-150);
+  }
+
+  &__slider {
+    overflow: visible;
   }
 
   &__list {
@@ -90,5 +110,15 @@
   &__decor {
     position: sticky;
     top: 0;
+
+    &-text {
+      position: absolute;
+      top: -170px;
+      left: -130px;
+      z-index: var(--z-index-minus-1);
+      width: 1402px;
+      height: 645px;
+      pointer-events: none;
+    }
   }
 }
