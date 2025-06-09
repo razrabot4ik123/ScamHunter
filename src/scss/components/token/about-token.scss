@@ -12,6 +12,8 @@
   }
 
   &__head {
+    position: sticky;
+    top: 40px;
     margin-bottom: 93px;
   }
 
@@ -49,7 +51,7 @@
   &__item {
     @include flex-column;
     position: sticky;
-    top: 50px;
+    top: 315px;
     justify-content: space-between;
     border-radius: 8px;
     padding: 26px 33px 34px 35px;
