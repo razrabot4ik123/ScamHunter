@@ -7,7 +7,9 @@ import '/scss/token.scss';
 import { useBurger } from './components/burger';
 import { useCookie } from './components/cookie';
 import { usePartnersSlider } from './components/slider';
+import { useQuestionsAccordion } from './components/questionsAccordion';
 
 useBurger();
 useCookie();
 usePartnersSlider();
+useQuestionsAccordion();
