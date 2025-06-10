@@ -7,9 +7,13 @@ import '/scss/token.scss';
 import { useBurger } from './components/burger';
 import { useCookie } from './components/cookie';
 import { usePartnersSlider } from './components/slider';
+import { useAboutTokenSlider } from './components/slider';
+import { useReadMoreBtn } from './components/token/readMoreBtn';
 import { useQuestionsAccordion } from './components/questionsAccordion';
 
 useBurger();
 useCookie();
 usePartnersSlider();
+useAboutTokenSlider();
+useReadMoreBtn();
 useQuestionsAccordion();

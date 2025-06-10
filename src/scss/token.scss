@@ -10,3 +10,13 @@
 @import 'components/token/about-token';
 @import 'components/questions';
 @import 'components/footer';
+
+// custom
+.questions {
+  margin-bottom: 92px;
+
+  @include mobile {
+    margin-bottom: 0;
+    transform: translateY(-66px);
+  }
+}

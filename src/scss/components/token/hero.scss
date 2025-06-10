@@ -1,4 +1,12 @@
 .hero {
+  @include tablet {
+    margin-bottom: 61px;
+  }
+
+  @include mobile {
+    margin-bottom: 21px;
+  }
+
   &__container {
     position: relative;
   }

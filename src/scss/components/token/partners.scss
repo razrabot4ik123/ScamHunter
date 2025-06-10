@@ -1,6 +1,18 @@
 .partners {
   margin-bottom: 155px;
 
+  @include mini-desktop {
+    margin-bottom: 105px;
+  }
+
+  @include tablet {
+    margin-bottom: 85px;
+  }
+
+  @include mobile {
+    margin-bottom: 36px;
+  }
+
   &__container {
     @include mobile {
       padding: 0;

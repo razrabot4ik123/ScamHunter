@@ -15,6 +15,11 @@
   &__subtitle {
     margin-bottom: 62px;
     text-align: center;
+
+    @include tablet {
+      margin-bottom: 42px;
+      font-size: 50px;
+    }
   }
 
   &__list {

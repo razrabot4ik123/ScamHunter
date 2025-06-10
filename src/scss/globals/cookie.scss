@@ -106,6 +106,7 @@
     }
 
     &-item {
+      /* stylelint-disable-next-line selector-class-pattern */
       &:not(:first-child) .cookie__control-button {
         color: var(--text-color-220);
         background-color: var(--bg-color-250);

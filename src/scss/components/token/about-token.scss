@@ -1,5 +1,5 @@
 .about-token {
-  padding: 280px 0 100px;
+  padding: 204px 0 101px;
   background-image:
     linear-gradient(90deg, #040408 58%, transparent 100%),
     linear-gradient(180deg, #040408 5%, transparent 100%),
@@ -17,20 +17,64 @@
     contain;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 
+  @include mini-desktop {
+    padding: 134px 0 51px;
+  }
+
+  @include tablet {
+    overflow: hidden;
+    padding: 84px 0 0;
+  }
+
+  @include mobile {
+    padding-top: 45px;
+  }
+
   &__container {
     @include flex-justify-between;
-    gap: 60px;
+    gap: 10px 60px;
     align-items: flex-start;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mobile {
+      gap: 0;
+    }
   }
 
   &__info {
     max-width: 691px;
+
+    @include small-desktop {
+      max-width: 600px;
+    }
+
+    @include mini-desktop {
+      max-width: 470px;
+    }
+
+    @include tablet {
+      max-width: 100%;
+    }
   }
 
   &__head {
     position: sticky;
     top: 40px;
     margin-bottom: 93px;
+
+    @include tablet {
+      position: relative;
+      top: auto;
+      margin-bottom: 53px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 46px;
+    }
   }
 
   &__title {
@@ -51,11 +95,39 @@
     -webkit-text-fill-color: transparent;
     background: linear-gradient(180deg, #fff 80.93%, #fff0 82.13%, #fff 94.92%);
     background-clip: text;
+
+    @include mini-desktop {
+      font-size: 50px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+      max-width: 700px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 650px) {
+      font-size: 44px;
+      -webkit-text-fill-color: transparent;
+      background: linear-gradient(180deg, #fff 86.59%, #fff0 87.43%, #fff 96.38%);
+      background-clip: text;
+    }
   }
 
   &__description {
     line-height: 1.44;
     color: var(--text-color-150);
+
+    @include tablet {
+      max-width: 700px;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__slider {
@@ -65,7 +137,11 @@
   &__list {
     display: grid;
     gap: 100px;
-    grid-auto-rows: 1fr;
+
+    @include tablet {
+      display: flex;
+      gap: 0;
+    }
   }
 
   &__item {
@@ -78,13 +154,36 @@
     height: 100%;
     background: var(--bg-color-260);
 
+    @include small-desktop {
+      top: 350px;
+    }
+
+    @include mini-desktop {
+      padding: 25px 35px 25px 25px;
+    }
+
+    @include tablet {
+      position: relative;
+      top: auto;
+      height: auto;
+    }
+
     &:not(:first-child) {
       box-shadow: 0 -8px 10px #0404084d;
+
+      @include tablet {
+        box-shadow: none;
+      }
     }
 
     &-top {
       @include flex-justify-between;
-      margin-bottom: 107px;
+      gap: 20px;
+      margin-bottom: 68px;
+
+      @include mini-desktop {
+        margin-bottom: 32px;
+      }
     }
 
     &-title {
@@ -92,6 +191,14 @@
       font-size: 30px;
       line-height: 1.14;
       letter-spacing: -0.02em;
+
+      @include tablet {
+        font-size: 28px;
+      }
+
+      @include mobile {
+        font-size: 25px;
+      }
     }
 
     &-count {
@@ -104,12 +211,59 @@
       line-height: 1.44;
       color: var(--text-color-150);
       opacity: 0.78;
+
+      @include tablet {
+        opacity: 1;
+      }
+
+      &--more {
+        padding: 0;
+        font-weight: 500;
+        text-decoration-style: dotted;
+        text-decoration-line: underline;
+        text-underline-position: from-font;
+        color: var(--accent-color-10);
+        text-decoration-thickness: 10%;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &-item {
+        display: flex;
+        gap: 8px;
+        margin-left: 8px;
+        line-height: 1.44;
+        color: var(--text-color-150);
+        opacity: 0.78;
+
+        @include tablet {
+          opacity: 1;
+        }
+
+        &::before {
+          content: '';
+          flex-shrink: 0;
+          margin-top: 8px;
+          border-radius: 50%;
+          width: 5px;
+          height: 5px;
+          background-color: var(--text-color-150);
+        }
+      }
     }
   }
 
   &__decor {
     position: sticky;
     top: 0;
+    pointer-events: none;
+
+    @include tablet {
+      position: relative;
+      top: auto;
+    }
 
     &-text {
       position: absolute;
@@ -119,6 +273,23 @@
       width: 1402px;
       height: 645px;
       pointer-events: none;
+
+      @include small-desktop {
+        top: -120px;
+        left: 0;
+        width: 1102px;
+        height: 345px;
+      }
+
+      @include mini-desktop {
+        top: -50px;
+        width: 902px;
+        height: 145px;
+      }
+
+      @include tablet {
+        display: none;
+      }
     }
   }
 }

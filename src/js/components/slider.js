@@ -33,6 +33,13 @@ export const usePartnersSlider = () => {
       slidesPerView: 1.3,
       initialSlide: 1,
       breakpoints: {
+        441: {
+          grid: {
+            fill: 'row',
+            rows: 2,
+          },
+          slidesPerView: 1.5,
+        },
         577: {
           grid: {
             fill: 'row',
@@ -98,4 +105,46 @@ export const useSinglePageTargetSlider = () => {
       prevEl: '.target__right-button--prev',
     },
   });
+};
+
+export const useAboutTokenSlider = () => {
+  let aboutTokenSlider = null;
+
+  function checkWidth() {
+    if (window.innerWidth <= 992) {
+      if (!aboutTokenSlider) {
+        initSwiper();
+      }
+    } else {
+      if (aboutTokenSlider) {
+        destroySwiper();
+      }
+    }
+  }
+
+  function initSwiper() {
+    aboutTokenSlider = new Swiper('.about-token__slider', {
+      speed: 1000,
+      spaceBetween: 11,
+      slidesPerView: 1.1,
+      breakpoints: {
+        577: {
+          slidesPerView: 1.4,
+        },
+        769: {
+          slidesPerView: 2.1,
+        },
+      },
+    });
+  }
+
+  function destroySwiper() {
+    if (aboutTokenSlider) {
+      aboutTokenSlider.destroy(true, true);
+      aboutTokenSlider = null;
+    }
+  }
+
+  window.addEventListener('resize', checkWidth);
+  checkWidth();
 };
