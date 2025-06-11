@@ -33,11 +33,12 @@
     }
 
     @include tablet {
+      border-radius: 20px;
       padding: 36px 32px 50px;
     }
 
     @include mobile {
-      border-radius: 18px;
+      border-radius: 10px;
       padding: 26px 20px 40px;
     }
 

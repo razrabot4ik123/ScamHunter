@@ -166,6 +166,7 @@
         flex-shrink: 0;
       }
 
+      /* stylelint-disable-next-line no-descending-specificity */
       & path {
         transition: fill var(--transition);
       }

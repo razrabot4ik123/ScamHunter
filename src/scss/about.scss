@@ -5,4 +5,15 @@
 // components
 @import './components/header';
 @import './components/about/hero';
+@import './components/about/reasons';
+@import './components/projects-scam';
 @import './components/footer';
+
+// custom css
+.projects-scam {
+  margin-bottom: 101px;
+
+  @include mobile {
+    margin-bottom: 64px;
+  }
+}

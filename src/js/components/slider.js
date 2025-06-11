@@ -21,17 +21,15 @@ export const usePartnersSlider = () => {
       modules: [Autoplay, Grid],
       speed: 1000,
       autoplay: {
-        delay: 2000,
+        delay: 3000,
         disableOnInteraction: false,
       },
       grid: {
         fill: 'row',
         rows: 2,
       },
-      centeredSlides: true,
       spaceBetween: 10,
       slidesPerView: 1.3,
-      initialSlide: 1,
       breakpoints: {
         441: {
           grid: {
@@ -142,6 +140,59 @@ export const useAboutTokenSlider = () => {
     if (aboutTokenSlider) {
       aboutTokenSlider.destroy(true, true);
       aboutTokenSlider = null;
+    }
+  }
+
+  window.addEventListener('resize', checkWidth);
+  checkWidth();
+};
+
+export const useAboutHeroSlider = () => {
+  let aboutHeroSlider = null;
+
+  function checkWidth() {
+    if (window.innerWidth <= 992) {
+      if (!aboutHeroSlider) {
+        initSwiper();
+      }
+    } else {
+      if (aboutHeroSlider) {
+        destroySwiper();
+      }
+    }
+  }
+
+  function initSwiper() {
+    aboutHeroSlider = new Swiper('.hero__slider', {
+      modules: [Autoplay],
+      autoplay: {
+        delay: 8000,
+        disableOnInteraction: false,
+      },
+      speed: 1000,
+      spaceBetween: 11,
+      slidesPerView: 1.1,
+      breakpoints: {
+        501: {
+          spaceBetween: 15,
+          slidesPerView: 1.3,
+        },
+        601: {
+          spaceBetween: 15,
+          slidesPerView: 1.7,
+        },
+        769: {
+          spaceBetween: 21,
+          slidesPerView: 2.2,
+        },
+      },
+    });
+  }
+
+  function destroySwiper() {
+    if (aboutHeroSlider) {
+      aboutHeroSlider.destroy(true, true);
+      aboutHeroSlider = null;
     }
   }
 
