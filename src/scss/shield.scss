@@ -1,0 +1,161 @@
+@import './mixins';
+@import './base';
+@import './globals';
+
+// components
+@import './components/header';
+@import './components/shield/hero';
+@import './components/shield/about-shield';
+@import './components/shield/questions';
+@import './components/projects-shield';
+@import './components/footer';
+
+// custom css
+::selection {
+  background-color: var(--accent-color-40);
+}
+
+/* stylelint-disable-next-line selector-no-vendor-prefix */
+::-moz-selection {
+  background-color: var(--accent-color-40);
+}
+
+.cookie {
+  &__close {
+    & path {
+      fill: var(--accent-color-40);
+    }
+  }
+
+  &__control {
+    &-button {
+      background-color: var(--accent-color-40);
+
+      &:hover {
+        color: var(--accent-color-40);
+      }
+    }
+
+    &-item {
+      /* stylelint-disable-next-line selector-class-pattern */
+      &:not(:first-child) .cookie__control-button {
+        &:hover {
+          background-color: var(--accent-color-40);
+        }
+      }
+    }
+  }
+
+  &__options {
+    &-checkbox {
+      &::before {
+        background: url('../assets/icons/check-orange.svg') 50% 50% no-repeat;
+      }
+    }
+  }
+}
+
+.header {
+  &__logo {
+    & path {
+      &:not(:nth-child(2)) {
+        fill: var(--accent-color-40);
+      }
+    }
+  }
+
+  &__language {
+    &-link {
+      &:hover {
+        color: var(--accent-color-40);
+      }
+
+      &--active {
+        color: var(--accent-color-40);
+      }
+    }
+  }
+
+  &__socials {
+    &-link {
+      &:hover {
+        border-color: var(--accent-color-90);
+        background-color: var(--accent-color-40);
+      }
+    }
+  }
+
+  &__burger {
+    &:hover {
+      border-color: var(--accent-color-90);
+      background-color: var(--accent-color-40);
+    }
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    & path {
+      fill: var(--accent-color-40);
+    }
+  }
+}
+
+.nav {
+  &__link {
+    &:hover {
+      color: var(--accent-color-40);
+    }
+
+    &--active {
+      color: var(--accent-color-40);
+    }
+
+    & svg {
+      /* stylelint-disable-next-line no-descending-specificity */
+      & path {
+        fill: var(--accent-color-40);
+      }
+    }
+  }
+}
+
+.projects-shield {
+  margin-bottom: 100px;
+
+  @include tablet {
+    margin-bottom: 80px;
+  }
+
+  @include mobile {
+    margin-bottom: 52px;
+  }
+}
+
+.footer {
+  &__logo {
+    & path {
+      &:not(:nth-child(2)) {
+        fill: var(--accent-color-40);
+      }
+    }
+  }
+
+  &__nav {
+    &-link {
+      &:hover {
+        color: var(--accent-color-40);
+      }
+
+      &--active {
+        color: var(--accent-color-40);
+      }
+    }
+  }
+
+  &__socials {
+    &-link {
+      &:hover {
+        border-color: var(--accent-color-90);
+        background-color: var(--accent-color-40);
+      }
+    }
+  }
+}

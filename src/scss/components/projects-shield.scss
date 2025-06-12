@@ -211,7 +211,8 @@
       transform var(--transition),
       border-top var(--transition),
       border-radius var(--transition),
-      box-shadow var(--transition);
+      box-shadow var(--transition),
+      z-index var(--transition);
 
     // ВРЕМЕННО
     @include small-desktop {

@@ -8,15 +8,4 @@
 @import 'components/token/partners';
 @import 'components/token/tokenomics';
 @import 'components/token/about-token';
-@import 'components/questions';
 @import 'components/footer';
-
-// custom css
-.questions {
-  margin-bottom: 92px;
-
-  @include mobile {
-    margin-bottom: 0;
-    transform: translateY(-66px);
-  }
-}

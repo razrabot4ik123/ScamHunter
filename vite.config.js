@@ -19,6 +19,7 @@ export default defineConfig({
         hunt: './src/hunt.html',
         main: './src/index.html',
         news: './src/news.html',
+        shield: './src/shield.html',
         'single-check': './src/single-check.html',
         'single-news': './src/single-news.html',
         'single-scam': './src/single-scam.html',

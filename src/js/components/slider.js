@@ -199,3 +199,51 @@ export const useAboutHeroSlider = () => {
   window.addEventListener('resize', checkWidth);
   checkWidth();
 };
+
+export const useAboutShieldSlider = () => {
+  new Swiper('.about-shield__slider', {
+    modules: [Pagination, Navigation, Autoplay],
+    speed: 1200,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1.1,
+    slidesPerGroup: 1,
+    spaceBetween: 14,
+    navigation: {
+      nextEl: '.about-shield__controls-button--next',
+      prevEl: '.about-shield__controls-button--prev',
+    },
+    breakpoints: {
+      468: {
+        slidesPerView: 1.3,
+        slidesPerGroup: 1,
+      },
+      577: {
+        slidesPerView: 1.5,
+        slidesPerGroup: 1,
+      },
+      611: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      769: {
+        slidesPerView: 2.4,
+        slidesPerGroup: 2,
+      },
+      993: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+      1201: {
+        slidesPerView: 3.5,
+        slidesPerGroup: 3,
+      },
+      1401: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+      },
+    },
+  });
+};

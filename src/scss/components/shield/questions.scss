@@ -1,4 +1,14 @@
 .questions {
+  margin-bottom: 100px;
+
+  @include tablet {
+    margin-bottom: 60px;
+  }
+
+  @include mobile {
+    margin-bottom: 46px;
+  }
+
   &__container {
     max-width: 922px;
 
