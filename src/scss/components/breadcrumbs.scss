@@ -1,1 +1,52 @@
+.breadcrumbs {
+  margin-bottom: 60px;
 
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  @include mobile {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    @include flex-align-center;
+    gap: 13px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      @include flex-align-center;
+      gap: 13px;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 14px;
+        height: 14px;
+        background: url('../assets/icons/arrow-right-grey.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__link {
+    color: #fff;
+    transition:
+      color var(--transition),
+      opacity var(--transition);
+
+    &:hover {
+      color: var(--accent-color-10);
+    }
+
+    &--current {
+      opacity: 0.34;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
