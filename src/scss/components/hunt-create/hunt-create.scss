@@ -192,27 +192,20 @@
     }
 
     &-button {
-      display: inline-block;
+      border: 2px solid var(--border-color-160);
       border-radius: 14px;
-      padding: 17px 25px;
+      padding: 15px 23px;
+      width: 100%;
       font-weight: 500;
       font-size: 15px;
       line-height: 1.05;
       letter-spacing: -0.02em;
-      text-align: center;
       color: var(--text-color-40);
       background-color: var(--bg-color-230);
-      transition:
-        background-color var(--transition),
-        color var(--transition);
+      transition: border-color var(--transition);
 
-      @include mobile {
-        width: 100%;
-      }
-
-      &:hover {
-        color: var(--text-color-30);
-        background-color: var(--accent-color-10);
+      &:focus {
+        border-color: var(--accent-color-10);
       }
     }
   }
@@ -255,7 +248,7 @@
         content: '';
         position: absolute;
         inset: 0;
-        background: url('../assets/icons/check.svg') 50% 50% no-repeat;
+        background: url('../assets/icons/check-green.svg') 50% 50% no-repeat;
         opacity: 0;
         visibility: hidden;
         transition:
