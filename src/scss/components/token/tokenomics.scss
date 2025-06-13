@@ -20,6 +20,10 @@
       margin-bottom: 42px;
       font-size: 50px;
     }
+
+    @include mobile {
+      margin-bottom: 36px;
+    }
   }
 
   &__list {

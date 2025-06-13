@@ -43,8 +43,13 @@
     }
 
     @include small-tablet {
+      margin-bottom: 45px;
       font-size: 45px;
       text-align: start;
+    }
+
+    @include mobile {
+      margin-bottom: 39px;
     }
 
     @media (max-width: 680px) {

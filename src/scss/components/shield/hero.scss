@@ -1,6 +1,17 @@
 .hero {
+  position: relative;
+
+  @include mini-desktop {
+    padding: 94px 0 104px;
+  }
+
+  @include mobile {
+    padding-bottom: 54px; 
+  }
+
   &__container {
     @include flex-justify-between-align-center;
+    gap: 30px;
   }
 
   &__title {
@@ -20,6 +31,14 @@
     z-index: var(--z-index-1);
     margin-right: 37px;
     max-width: 698px;
+
+    @include small-desktop {
+      max-width: 600px;
+    }
+
+    @include mini-desktop {
+      max-width: 100%;
+    }
   }
 
   &__subtitle {
@@ -27,6 +46,14 @@
     -webkit-text-fill-color: transparent;
     background: linear-gradient(180deg, #fff 80.13%, #fff0 81.39%, #fff 94.87%);
     background-clip: text;
+
+    @include mini-desktop {
+      margin-bottom: 35px;
+    }
+
+    @include tablet {
+      margin-bottom: 22px;
+    }
   }
 
   &__description {
@@ -56,6 +83,50 @@
       & span {
         margin-left: 5px;
         min-width: 14px;
+      }
+    }
+  }
+
+  &__decor {
+    z-index: var(--z-index-minus-2);
+
+    @include mini-desktop {
+      position: absolute;
+      top: -94px;
+      right: 50%;
+      width: 500px;
+      transform: translateX(50%);
+    }
+
+    @include tablet {
+      top: -84px;
+    }
+
+    @include mobile {
+      top: -50px;
+      width: 300px;
+    }
+
+    &-background {
+      position: absolute;
+      inset: 0;
+      top: -131px;
+      z-index: var(--z-index-minus-1);
+      pointer-events: none;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 150px;
+        background: linear-gradient(to top, #040408 15%, transparent 100%);
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
       }
     }
   }

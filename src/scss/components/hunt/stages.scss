@@ -106,7 +106,7 @@
       }
 
       @include mobile {
-        margin-bottom: 35px;
+        margin-bottom: 21px;
       }
 
       @media (max-width: 483px) {
@@ -183,6 +183,7 @@
           margin-bottom: 15px;
         }
 
+        /* stylelint-disable-next-line selector-class-pattern */
         .stages__right-count::after {
           content: '';
           position: absolute;
@@ -213,6 +214,7 @@
       }
 
       &:nth-child(odd) {
+        /* stylelint-disable-next-line selector-class-pattern */
         .stages__right-card {
           background: var(--bg-color-170);
           backdrop-filter: blur(39px);
