@@ -6,6 +6,14 @@
     margin-bottom: 94px;
   }
 
+  @include small-tablet {
+    margin-bottom: 64px;
+  }
+
+  @include mobile {
+    margin-bottom: 49px;
+  }
+
   &__title {
     margin-bottom: 10px;
     font-weight: 400;
@@ -28,6 +36,11 @@
 
     @include small-tablet {
       font-size: 45px;
+    }
+
+    @include mobile {
+      background: linear-gradient(180deg, #fff 69.19%, #fff0 70.97%, #fff 89.9%);
+      background-clip: text;
     }
   }
 

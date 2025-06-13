@@ -288,6 +288,7 @@
       text-decoration-line: underline;
       text-underline-position: from-font;
       color: var(--accent-color-20);
+      text-decoration-skip-ink: none;
 
       &:hover {
         text-decoration: none;

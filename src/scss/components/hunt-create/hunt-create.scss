@@ -228,6 +228,10 @@
       @include mobile {
         margin-bottom: 7px;
       }
+
+      @media (max-width: 500px) {
+        align-items: flex-start;
+      }
     }
 
     &-input {
@@ -242,6 +246,10 @@
       background: var(--bg-color-240);
       cursor: pointer;
       backdrop-filter: blur(46px);
+
+      @media (max-width: 500px) {
+        margin-top: 3px;
+      }
 
       &::before {
         content: '';

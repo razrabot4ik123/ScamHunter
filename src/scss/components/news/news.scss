@@ -36,10 +36,12 @@
 
     @include small-desktop {
       gap: 25px 15px;
+      margin-bottom: 60px;
     }
 
     @include mini-desktop {
       grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 50px;
     }
 
     @include tablet {
