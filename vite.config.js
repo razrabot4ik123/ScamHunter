@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import injectHTML from 'vite-plugin-html-inject';
 
 export default defineConfig({
@@ -38,7 +39,7 @@ export default defineConfig({
   },
   plugins: [
     injectHTML(),
-    imageOptimizer({
+    ViteImageOptimizer({
       webp: {
         quality: 90,
       },
