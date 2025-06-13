@@ -36,5 +36,18 @@ export default defineConfig({
       },
     },
   },
-  plugins: [injectHTML()],
+  plugins: [
+    injectHTML(),
+    imageOptimizer({
+      webp: {
+        quality: 90,
+      },
+      png: {
+        quality: 90,
+      },
+      jpg: {
+        quality: 90,
+      },
+    }),
+  ],
 });
