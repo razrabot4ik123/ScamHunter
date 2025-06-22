@@ -81,21 +81,23 @@
 
     // ВРЕМЕННО КОНЕЦ
 
-    &::before {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: var(--z-index-1);
-      height: 350px;
-      background: linear-gradient(
-        178deg,
-        #0a0c0e00 1.61%,
-        #0e1012d9 31.39%,
-        #121417 61.05%,
-        #15171b 98.39%
-      );
+    &-link {
+      &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: var(--z-index-1);
+        height: 350px;
+        background: linear-gradient(
+          178deg,
+          #0a0c0e00 1.61%,
+          #0e1012d9 31.39%,
+          #121417 61.05%,
+          #15171b 98.39%
+        );
+      }
     }
 
     &-img {

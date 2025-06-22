@@ -27,6 +27,11 @@ export default defineConfig({
         success: './src/success.html',
         token: './src/token.html',
       },
+      output: {
+        entryFileNames: 'assets/[name].js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/[name][extname]',
+      },
     },
   },
   css: {

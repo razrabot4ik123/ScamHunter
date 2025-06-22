@@ -174,6 +174,7 @@
 
     &-item {
       @include flex-justify-between;
+      position: relative;
       gap: 38px;
 
       &:not(:last-child) {
@@ -183,13 +184,12 @@
           margin-bottom: 15px;
         }
 
-        /* stylelint-disable-next-line selector-class-pattern */
-        .stages__right-count::after {
+        &::after {
           content: '';
           position: absolute;
           bottom: 0;
           width: 1px;
-          height: 230px;
+          height: 100%;
           background-image: repeating-linear-gradient(
             to bottom,
             #ffffff47,
@@ -197,18 +197,10 @@
             transparent 2px,
             transparent 6px
           );
-          transform: translateY(100%);
+          transform: translate(21px, 50px);
 
-          @include mini-desktop {
-            height: 300px;
-          }
-
-          @include tablet {
-            height: 220px;
-          }
-
-          @include small-tablet {
-            height: 234px;
+          @include mobile {
+            display: none;
           }
         }
       }
